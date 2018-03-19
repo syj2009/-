@@ -28,7 +28,7 @@
           <image image src='../../image/index/zhuanfa.png' class='btn-icon'></image>
           <text class='btn-title'>转发</text>
         </view>
-        <view class='btn-view'>
+        <view class='btn-more'>
           <image image src='../../image/index/setting.png' class='btn-icon'></image>
           <text class='btn-title'>更多</text>
         </view>

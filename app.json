@@ -1,9 +1,8 @@
 {
   "pages":[
-    "pages/model-website/index",
     "pages/index/index",
-    "pages/model-list/index",
-    "pages/logs/logs"
+    "pages/model-website/index",
+    "pages/model-list/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
@@ -15,7 +14,7 @@
     "onReachBottomDistance": 50
   },
   "tabBar": {
-    "color": "#888888",
+    "color": "#666",
     "selectedColor": "#de644f",
     "borderStyle": "#d1d1d1",
     "backgroundColor": "#fdfdfd",

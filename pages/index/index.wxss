@@ -2,8 +2,13 @@
   background-color: #f2f3f4;
 }
 
+swiper {
+  height: 290rpx;
+}
+
 .slide-image {
   width: 100%;
+  height: 290rpx;
 }
 
 /*模型列表样式  */
@@ -14,14 +19,14 @@
 .model-item {
   background-color: #fff;
   margin-bottom: 20rpx;
-  border: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
 }
 
 .top-view {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 30rpx 40rpx;
+  padding: 30rpx 20rpx 20rpx 30rpx;
 }
 
 .model-img {
@@ -33,46 +38,55 @@
   margin-right: 20rpx;
 }
 
+
 .school-title {
   font-size: 34rpx;
-  color: #888;
-  margin-bottom: 20rpx;
+  color: #333;
+  margin-bottom: 16rpx;
 }
 
 .websiteItem {
+  display: block;
+  float:left;
   width: 110rpx;
-  height: 36rpx;
-  font-size: 26rpx;
+  height: 40rpx;
+  font-size: 29rpx;
   color: #fff;
-  background-color: #de644f;
-  line-height: 36rpx;
+  background-color: #fd9c84;
+  line-height: 40rpx;
   text-align: center;
-  padding: 0 10rpx;
+  padding: 0 5rpx;
   margin-right: 20rpx;
   border-radius: 5rpx;
+  border:1px solid #e54f2a;
 }
 
 .classItem {
+  display: block;
+  float:left;
   width: 110rpx;
-  height: 36rpx;
-  font-size: 26rpx;
+  height: 40rpx;
+  font-size: 29rpx;
   color: #fff;
-  background-color: #72c1fa;
-  line-height: 36rpx;
+  background-color: #76c0ff;
+  line-height: 40rpx;
   text-align: center;
-  padding: 0 10rpx;
+  padding: 0 5rpx;
   margin-right: 20rpx;
   border-radius: 5rpx;
+  border:1px solid #5694ca;
 }
 
 .statuesItem {
+  display: block;
+  float:left;
   width: 110rpx;
-  height: 36rpx;
-  font-size: 26rpx;
-  color: #72c1fa;
+  height: 40rpx;
+  font-size: 29rpx;
+  color: #4a66cd;
   background-color: #fff;
-  border: 1rpx solid #ddd; 
-  line-height: 36rpx;
+  border: 1rpx solid #4a66cd; 
+  line-height: 40rpx;
   text-align: center;
   padding: 0 10rpx;
   margin-right: 20rpx;
@@ -80,26 +94,31 @@
 }
 
 .bottom-view {
-  height: 88rpx;
-  line-height: 88rpx;
+  height: 70rpx;
+  line-height: 70rpx;
   border-top: 1rpx solid #ddd;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.btn-view {
-  width: 100%;
-  height: 88rpx;
-  line-height: 88rpx;
+.btn-view,.btn-more {
+  width: 50%;
+  height: 70rpx;
+  line-height: 70rpx;
   text-align: center;
+  color: #666;
+  font-size: 30rpx;
+}
+.btn-view{
   border-right: 1rpx solid #ddd;
 }
 
 .btn-icon {
-  width: 30rpx;
-  height: 30rpx;
-  margin-right: 10rpx;
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 12rpx;
+  vertical-align:-3rpx;
 }
 
 /*加号浮动  */
