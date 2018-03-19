@@ -1,0 +1,112 @@
+.contain {
+  background-color: #f2f3f4;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+/*模型列表样式  */
+.model-list {
+  margin-top: 30rpx;
+}
+
+.model-item {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #ddd;
+}
+
+.top-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 30rpx 40rpx;
+}
+
+.model-img {
+  width: 200rpx;
+  height: 120rpx;
+}
+
+.show-img {
+  margin-right: 20rpx;
+}
+
+.school-title {
+  font-size: 34rpx;
+  color: #888;
+  margin-bottom: 20rpx;
+}
+
+.websiteItem {
+  width: 110rpx;
+  height: 36rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #de644f;
+  line-height: 36rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  margin-right: 20rpx;
+  border-radius: 5rpx;
+}
+
+.classItem {
+  width: 110rpx;
+  height: 36rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #72c1fa;
+  line-height: 36rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  margin-right: 20rpx;
+  border-radius: 5rpx;
+}
+
+.statuesItem {
+  width: 110rpx;
+  height: 36rpx;
+  font-size: 26rpx;
+  color: #72c1fa;
+  background-color: #fff;
+  border: 1rpx solid #ddd; 
+  line-height: 36rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  margin-right: 20rpx;
+  border-radius: 5rpx;
+}
+
+.bottom-view {
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: 1rpx solid #ddd;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.btn-view {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-right: 1rpx solid #ddd;
+}
+
+.btn-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+/*加号浮动  */
+.add-model {
+  position: fixed;
+  width: 60rpx;
+  height: 60rpx;
+  bottom: 126rpx;
+  left: 48%;
+}

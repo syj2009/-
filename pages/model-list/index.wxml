@@ -1,0 +1,36 @@
+<view class='contain'>
+  <view class='nav-list'>
+    <view class='.nav-item-click'>
+      <text>全部</text>
+    </view>
+    <view class='nav-item'>
+      <text>微官网</text>
+    </view>
+    <view class='nav-item'>
+      <text>微班级</text>
+    </view>
+  </view>
+  <view class='class-list'>
+    <view class='class-item'>
+      <view class='img-box'>
+        <image src='../../image/post/banner1.png' class='class-img'></image>
+        <image src='../../image/post/banner1.png' class='vip-img'></image>
+      </view>
+      <view class='class-name'>会计招生主题</view>
+    </view>
+     <view class='class-item'>
+      <view class='img-box'>
+        <image src='../../image/post/banner1.png' class='class-img'></image>
+        <image src='../../image/post/banner1.png' class='vip-img'></image>
+      </view>
+      <view class='class-name'>会计招生主题</view>
+    </view>
+     <view class='class-item'>
+      <view class='img-box'>
+        <image src='../../image/post/banner1.png' class='class-img'></image>
+        <image src='../../image/post/banner1.png' class='vip-img'></image>
+      </view>
+      <view class='class-name'>会计招生主题</view>
+    </view>
+  </view>
+</view>

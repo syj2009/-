@@ -1,0 +1,39 @@
+<view class='contain'>
+  <view class='swiper-container'>
+    <swiper  indicator-dots="true" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image"  mode="scaleToFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+  </view>
+  <view class='model-list'>
+    <view class='model-item'>
+      <view class='top-view'>
+        <view class='show-img'>
+          <image src='../../image/index/banner.png' class='model-img'></image>
+        </view>
+        <view class='school-view'>
+          <view class='school-title'>青岛托普学校</view>
+          <view class='label-list'>
+            <text class='websiteItem'>微官网</text>
+            <text class='classItem'>微班级</text>
+            <text class='statuesItem'>已停用</text>
+          </view>
+        </view>
+      </view>
+      <view class='bottom-view'>
+        <view class='btn-view'>
+          <image image src='../../image/index/zhuanfa.png' class='btn-icon'></image>
+          <text class='btn-title'>转发</text>
+        </view>
+        <view class='btn-view'>
+          <image image src='../../image/index/setting.png' class='btn-icon'></image>
+          <text class='btn-title'>更多</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <image image src='../../image/index/add-icon.png' class='add-model'></image>
+</view>
