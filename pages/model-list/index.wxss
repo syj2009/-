@@ -59,7 +59,7 @@
 }
 
 .vip-img {
-  width: 30rpx;
+  width: 60rpx;
   height: 30rpx;
   position: absolute;
   top: 10rpx;

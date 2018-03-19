@@ -35,5 +35,5 @@
       </view>
     </view>
   </view>
-  <image image src='../../image/index/add-icon.png' class='add-model'></image>
+  <image image src='../../image/index/add-icon.png' class='add-model' bindtap='goModelList'></image>
 </view>

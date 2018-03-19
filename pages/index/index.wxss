@@ -105,8 +105,8 @@
 /*加号浮动  */
 .add-model {
   position: fixed;
-  width: 60rpx;
-  height: 60rpx;
-  bottom: 126rpx;
-  left: 48%;
+  width: 80rpx;
+  height: 80rpx;
+  bottom: 20rpx;
+  left: 45%;
 }

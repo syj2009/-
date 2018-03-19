@@ -21,14 +21,6 @@ P('index', {
    * 初次加载页面配置
    * **/
   onLoad: function (options) {
-    wx.setNavigationBarColor({
-      frontColor: '#ffffff',
-      backgroundColor: '#37383b',
-      animation: {
-        duration: 400,
-        timingFunc: 'easeIn'
-      }
-    })
     wx.setNavigationBarTitle({
       title: '快报名'
     })
@@ -49,4 +41,12 @@ P('index', {
     wx.stopPullDownRefresh()
   },
 
+  /**
+   * 跳转到模版列表页面
+   */
+  goModelList: function () {
+    wx.navigateTo({
+      url: "/pages/model-list/index",
+    })
+  }
 })
