@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/model-website/index",
     "pages/index/index",
     "pages/model-list/index",
     "pages/logs/logs"
