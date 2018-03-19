@@ -2,51 +2,26 @@
 var P = require('../../lib/wxpage')
 P('index', {
   data: {
-    //1：轮播图相关配置
-    imgUrls: [
-      '../../image/index/banner.png',
-      '../../image/index/banner.png',
-      '../../image/index/banner.png'
-    ],
-    indicatorDots: false,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000,
+    tabs: ["选项一", "选项二", "选项三"],
+    activeIndex: 1,
+    sliderOffset: 0,
+    sliderLeft: 0
   },
-
-  onLaunch: function () {
+  onLoad: function () {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+        });
+      }
+    });
   },
-
-  /**
-   * 初次加载页面配置
-   * **/
-  onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '快报名'
-    })
-    wx.showShareMenu({
-      withShareTicket: true
-    })
+  tabClick: function (e) {
     this.setData({
-      city: options.city
-    })
-    console.log("options.city$$$$$$$$$" + options.city)
-  },
-
-  /**
-     * 下拉刷新
-     * **/
-  onPullDownRefresh: function () {
-    //this.getPayCourseList();
-    wx.stopPullDownRefresh()
-  },
-
-  /**
-   * 跳转到模版列表页面
-   */
-  goModelList: function () {
-    wx.navigateTo({
-      url: "/pages/model-list/index",
-    })
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
   }
 })
