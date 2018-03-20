@@ -1,0 +1,50 @@
+<view class='contain'>
+  <view class='back-red'></view>
+  <view class='sitting'></view>
+  <view class='view-information'>
+    <view class='view-head'>
+      <image class='head-image' src='../../image/mine/head.jpg'></image>
+    </view>
+    <view class='information'>
+      <view class='name'>程梓欣</view>
+      <view class='school-name'>青岛托普培训学校</view>
+    <view class='bianji'>
+      <image class='bianji-img' src='../../image/mine/icon_bianji.png'></image>
+    </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='visiting-card'>
+      <image class='card-img' src='../../image/mine/icon_mingpian.png'></image>
+      <text>我的名片</text>
+      <image class='jinru' src='../../image/mine/icon_jinru.png'></image>
+    </view>
+    <view class='VIP-member'>
+      <image class='card-img' src='../../image/mine/icon_huiyuan.png'></image>
+      <text>VIP会员</text>
+      <image class='jinru' src='../../image/mine/icon_jinru.png'></image>
+    </view>
+    <view class='Inviting-VIP'>
+      <image class='card-img' src='../../image/mine/icon_yaoqing.png'></image>
+      <text>邀请得VIP</text>
+      <image class='jinru' src='../../image/mine/icon_jinru.png'></image>
+    </view>
+    <view class='binding-mechanism'>
+      <image class='card-img' src='../../image/mine/icon_bangding.png'></image>
+      <text>绑定机构</text>
+      <image class='jinru' src='../../image/mine/icon_jinru.png'></image>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='dry-goods-sharing'>
+      <image class='card-img' src='../../image/mine/icon_ganhuofenxiang.png'></image>
+      <text>干货分享</text>
+      <image class='jinru' src='../../image/mine/icon_jinru.png'></image>
+    </view>
+    <view class='feedback'>
+      <image class='card-img' src='../../image/mine/icon_yijian.png'></image>
+      <text>意见反馈</text>
+      <image class='jinru' src='../../image/mine/icon_jinru.png'></image>
+    </view>
+  </view>
+</view>

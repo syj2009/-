@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/mine/index",
     "pages/index/index",
     "pages/model-website/index",
     "pages/model-list/index",
