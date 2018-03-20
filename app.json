@@ -1,8 +1,9 @@
 {
-  "pages":[
-    "pages/model-website/index",
+  "pages": [
     "pages/index/index",
-    "pages/model-list/index"
+    "pages/model-website/index",
+    "pages/model-list/index",
+    "pages/follow/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
@@ -27,7 +28,7 @@
         "text": "招生"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/follow/index",
         "iconPath": "image/index/head-gray.png",
         "selectedIconPath": "image/index/head-red.png",
         "text": "跟进"
@@ -40,7 +41,15 @@
       }
     ]
   },
-
+  "subPackages": [
+    {
+      "root": "pages/content/",
+      "pages": [
+        "follow/details/details",
+        "follow/search/search"
+      ]
+    }
+  ],
   "networkTimeout": {
     "request": 10000,
     "connectSocket": 10000,
@@ -48,5 +57,4 @@
     "downloadFile": 10000
   },
   "debug": true
-
 }
