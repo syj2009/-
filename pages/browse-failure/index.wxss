@@ -1,0 +1,45 @@
+page{
+  margin: 0 auto;
+  height: 100%;
+  background-color: #f2f3f4;
+}
+.contain {
+   height: 100%;
+}
+
+.img-cover {
+  width: 324rpx; 
+  margin: 0 auto;
+  padding-top: 80rpx;
+}
+
+.failure-img {
+  width: 324rpx;
+  height: 234rpx;
+}
+
+.text-cover {
+  margin: 0 auto;
+  margin-bottom: 100rpx;
+  text-align: center;
+}
+
+.failure-text {
+  font: 42rpx;
+  color: #999;
+}
+
+.student-btn {
+  background: #dc6150;
+  width: 700rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.student-text {
+  color: #fff;
+  font: 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+ 
+}
