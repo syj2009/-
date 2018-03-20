@@ -1,5 +1,14 @@
 <view class ="contain">
-  <view>
+  <!-- <view class="modal-mask" bindtap="hideModal">
+    <view class= "modal-dialog">
+      <view class="modal-title">请选择举报原因</view>
+      <view class="modal-content">
+        <view> 0000000</view>
+      </view>
+      <view class="modal-footer">提交</view>
+    </view>
+  </view>  -->
+    <view>
     <view class = "img-cover">
       <image class = "failure-img" src='../../image/browse_failure/browse_failure.png'>
       </image>
@@ -11,5 +20,5 @@
     <view class = "student-btn">
       <text class = "student-text" bindtap = "makeClick">制作我的招生方案</text>
     </view>
-  </view>
+  </view>  
 </view>
