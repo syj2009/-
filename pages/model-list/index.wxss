@@ -51,6 +51,7 @@
   height: 198rpx;
   position: relative;
   border: 1rpx solid #e5e5e5;
+  border-radius: 10rpx;
 }
 
 .class-img {
