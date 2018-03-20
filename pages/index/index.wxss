@@ -110,6 +110,7 @@ swiper {
   color: #666;
   font-size: 30rpx;
 }
+
 .btn-view{
   border-right: 1rpx solid #ddd;
 }
@@ -119,6 +120,8 @@ swiper {
   height: 35rpx;
   margin-right: 12rpx;
   vertical-align:-3rpx;
+  position: relative;
+  top: -15rpx;
 }
 
 /*加号浮动  */
@@ -128,4 +131,45 @@ swiper {
   height: 80rpx;
   bottom: 20rpx;
   left: 45%;
+}
+
+
+/*分享按钮样式  */
+.btn-title {
+  display: inline;
+  background-color: #fff;
+  border: none;
+  position: static;
+  text-align: left;
+  font-size: 30rpx;
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-title-share {
+  display: inline;
+  background-color: #fff;
+  border: none;
+  position: static;
+  text-align: left;
+  font-size: 30rpx;
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-index::after {
+  border: 0;
+  padding: 0rpx 0rpx;
+} 
+
+.btn-index {
+  display:inline-block;
+  border: none !important;
+  background-color: #fff !important;
+  color: #666 !important;
+  padding: 0rpx 0rpx;
+  font-size: 26rpx;
+  margin-top: 0rpx;
 }
