@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/model-website/index",
+    "pages/index/index",
     "pages/model-list/index"
   ],
   "window": {
