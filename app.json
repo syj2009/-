@@ -1,8 +1,9 @@
 {
   "pages":[
-    "pages/mine/index",
-    "pages/index/index",
+    "pages/model-website-edite/index",
     "pages/model-website/index",
+    "pages/index/index",
+    "pages/mine/index",
     "pages/model-list/index"
   ],
   "window": {
