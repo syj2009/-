@@ -7,6 +7,11 @@
   width: 100%;
   background-size: 100%;
   background-repeat: repeat-y;
+  padding-top:100rpx;
+}
+
+.banner-top {
+  width: 100%;
 }
 
 .banner-top {
@@ -72,12 +77,14 @@
 
 .institution-advantage-list {
   padding: 0 30rpx;
+  margin-top:-50rpx;
 }
 
 .institution-advantage-item {
   overflow: hidden;
   border-bottom: 1rpx solid #ddd;
   padding-bottom: 50rpx;
+  padding-top:80rpx;
 }
 
 .float-left {
@@ -95,7 +102,7 @@
 }
 
 .institution-descr {
-  width: 60%;
+  width: 50%;
   font-size: 26rpx;
   color: #666;
 }
@@ -128,7 +135,6 @@
 
 .project-item {
   width: 260rpx;
-  height: 250rpx;
 }
 
 .project-img {
@@ -202,4 +208,238 @@
 .name-box input {
   height: 70rpx;
   line-height: 70rpx;
+}
+
+
+
+/*模版信息  */
+.hidden {
+  display: none;
+}
+
+.bg-black {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.alert-view {
+  height: 410rpx;
+  width: 610rpx;
+  margin: auto;
+  background-color: #fff;
+  margin-top: 300rpx;
+  border-radius: 10rpx;
+  padding-top: 10rpx;
+  overflow: hidden;
+}
+
+.text-area-box {
+  width: 550rpx;
+  height: 280rpx;
+  border: 1rpx solid #ddd;
+  padding: 10rpx;
+  margin: 10rpx auto;
+  position: relative;
+  font-size: 28rpx;
+  color: #999;
+  line-height: 36rpx;
+}
+
+.text-area-number {
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+}
+
+.btn-box {
+  height: 110rpx;
+  border-top: 1rpx solid #ddd;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.cancle-btn {
+  width: 50%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #888;
+  line-height: 90rpx;
+  height: 90rpx;
+}
+
+.submit-btn {
+  width: 50%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 90rpx;
+  background-color: #e26353;
+  height: 90rpx;
+}
+
+/*模版封面样式  */
+.cover-view {
+  background-color: #fff;
+  height: 780rpx;
+  width: 610rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  overflow: hidden;
+}
+
+.cover-title-view {
+  height: 180rpx;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 180rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.cover-name-view{
+  height: 88rpx;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.price-view {
+  height: 100rpx;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.cover-desc-view {
+  height: 302rpx;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.cover-title-name {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.cover-title-name-red {
+  font-size: 34rpx;
+  color: #de644f;
+}
+
+.fit-margin {
+  margin-top: 20rpx;
+  margin-bottom: 15rpx;  
+}
+
+.cover-title-shcool {
+  font-size: 34rpx;
+  color: #666;
+}
+
+.cover-title-img {
+  width: 200rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+
+.textarea-box {
+  background-color: #f7f7f7;
+  width: 570rpx;
+  height: 220rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: #999;
+  position: relative;
+}
+
+.textarea-style {
+  padding: 15rpx;
+}
+
+/*底部保存按钮  */
+.nav-bottom {
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #000;
+}
+
+.save-btn {
+  height: 88rpx;
+  font-size: 30rpx;
+}
+
+/*描边样式  */
+.border-blue-position {
+  display: inline-block;
+  padding: 4rpx;
+  border: 1rpx solid #00f0ff;
+  position: relative;
+  top: -20rpx;
+  right: 20rpx;
+}
+
+.border-blue-banner {
+  display: inline-block;
+  padding: 4rpx;
+  border: 1rpx solid #00f0ff;
+  position: relative;
+  top: -20rpx;
+  right: 20rpx;
+  width:100%;
+}
+
+.border-blue {
+  display: inline-block;
+  padding: 4rpx;
+  border: 1rpx solid #00f0ff;
+  position: relative;
+}
+
+.text-border-blue {
+  padding: 4rpx;
+  border: 1rpx solid #00f0ff;
+  position: relative;
+}
+
+.text-border-blue-title {
+  padding: 4rpx;
+  border: 1rpx solid #00f0ff;
+  position: relative;
+  top: -5rpx;
+}
+
+.edite-box {
+  display: inline-block;
+  width: 68rpx;
+  height: 70rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 80rpx;
+  position: absolute;
+  right: 0;
+  top: -70rpx;
+  border-radius: 10rpx;
+}
+
+.edite-icon {
+  width: 40rpx;
+  height: 40rpx;
 }
