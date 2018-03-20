@@ -1,15 +1,11 @@
 {
   "pages":[
-<<<<<<< HEAD
     "pages/browse-failure/index",
     "pages/mine/index",
+    "pages/personal-information/index",
     "pages/index/index",
-=======
     "pages/model-website-edite/index",
->>>>>>> 566ef03a7c85db1968dbac30be945436461bc7b5
     "pages/model-website/index",
-    "pages/index/index",
-    "pages/mine/index",
     "pages/model-list/index"
   ],
   "window": {
@@ -41,7 +37,7 @@
         "text": "跟进"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/mine/index",
         "iconPath": "image/index/people-gray.png",
         "selectedIconPath": "image/index/people-red.png",
         "text": "我的"

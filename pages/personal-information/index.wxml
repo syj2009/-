@@ -1,0 +1,29 @@
+<view class='contain'>
+  <view class='information-content'>
+    <view class='view-head'>
+      <text class='text'>头像</text>
+      <image class='information-image' src='../../image/mine/head.jpg'></image>
+    </view>
+    <view class='view-name'>
+      <text class='text'>姓名*</text>
+      <text class='name'>程梓欣</text>
+    </view>
+    <view class='view-mobile'>
+      <text class='text'>手机号码</text>
+      <text class='mobile'>13367890431</text>
+    </view>
+    <view class='view-institutionName'>
+      <text class='text'>机构名称</text>
+      <text class='institutionName'>青岛托普培训学校</text>
+    </view>
+    <view class='view-institutionAddress'>
+      <text class='text'>机构地址</text>
+      <text class='institutionAddress'>青岛市李沧区金水路157-10号</text>
+    </view>
+    <view class='view-QR-code'>
+      <text class='text'>微信名片二维码</text>
+      <image class='code' src='../../image/mine/QRCode.png'></image>
+    </view>
+  </view>
+  <view class='button'>提交</view>
+</view>

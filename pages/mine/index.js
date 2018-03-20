@@ -1,6 +1,12 @@
 /************岗位首页页面****************/
 var P = require('../../lib/wxpage')
 P('index', {
+  toPersonalInformation: function (e) {
+    var that = this
+    wx.navigateTo({
+      url: "/pages/personal-information/index"
+    });
+  },
   data: {
     
   },

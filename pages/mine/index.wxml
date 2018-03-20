@@ -9,7 +9,7 @@
       <view class='name'>程梓欣</view>
       <view class='school-name'>青岛托普培训学校</view>
     <view class='bianji'>
-      <image class='bianji-img' src='../../image/mine/icon_bianji.png'></image>
+      <image class='bianji-img' src='../../image/mine/icon_bianji.png'  bindtap='toPersonalInformation'></image>
     </view>
     </view>
   </view>
