@@ -1,13 +1,8 @@
 {
   "pages":[
-<<<<<<< HEAD
-    "pages/browse-failure/index",
-    "pages/mine/index",
-    "pages/index/index",
-=======
-    "pages/model-website-edite/index",
->>>>>>> 566ef03a7c85db1968dbac30be945436461bc7b5
     "pages/model-website/index",
+    "pages/model-class-edite/index",
+    "pages/model-class/index",
     "pages/index/index",
     "pages/mine/index",
     "pages/model-list/index"

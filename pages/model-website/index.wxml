@@ -1,0 +1,75 @@
+<view class="contain">
+  <view class='website-bg-img' style="background-image: url('../../image/modelDetail/bg.png')">
+    <view>
+      <image src='../../image/modelDetail/website-banner.png' class='banner-top'></image>
+    </view>
+    <view class='border-bg-img'>
+      <view class='img-box-center'><image class='head-img' src='../../image/modelDetail/website-banner.png'></image></view>
+      <view class='organizationName'>会考吧学院</view>
+      <view class='organizationContent'>分开了大开发阶段克里斯解放军大世界反垄断局as菲拉斯点附近的拉升房价</view>
+      <image class='left-gou' src='../../image/modelDetail/003.png'></image>
+      <image class='right-gou' src='../../image/modelDetail/003.png'></image>
+    </view>
+
+    <view class='border-bg-img'>
+      <view class='head-title' style="background-image: url('../../image/modelDetail/titleBox.png')">  
+        <text>机构优势</text>
+      </view>
+      <view class='institution-advantage-list'>
+        <view class='institution-advantage-item'>
+          <view class='float-left'>
+            <image src='../../image/modelDetail/banner001.png' class='institution-img'></image>
+          </view>
+          <view class='float-left institution-descr'>
+            分开了大开发阶段克里斯解放军大世界反垄断局as菲拉斯点附近的拉升房价;
+          </view>
+        </view>
+      </view>
+      <image class='left-gou' src='../../image/modelDetail/003.png'></image>
+      <image class='right-gou' src='../../image/modelDetail/003.png'></image>
+    </view>
+    
+    <view class='border-bg-img'>
+      <view class='head-title' style="background-image: url('../../image/modelDetail/titleBox.png')">  
+        <text>机构优势</text>
+      </view>
+      <view class='project-list'>
+        <view class='project-item'>
+          <view>
+            <image src='../../image/modelDetail/banner001.png' class='project-img'></image>
+          </view>
+          <view class='project-title'>学历教育</view>
+        </view>
+        <view class='project-item'>
+          <view>
+            <image src='../../image/modelDetail/banner001.png' class='project-img'></image>
+          </view>
+          <view class='project-title'>学历教育</view>
+        </view>
+        <view class='project-item'>
+          <view>
+            <image src='../../image/modelDetail/banner001.png' class='project-img'></image>
+          </view>
+          <view class='project-title'>学历教育学历教育学历教育</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='sign-up-view'>
+      <view class='code-view'>
+        <image class='code-img' src='../../image/modelDetail/banner001.png'></image>
+      </view>
+      <view class='code-descr'>长按识别二维码，即刻加入微信群。教授，专业大咖课程免费听！</view>
+      <view class='name-box'>
+        <input placeholder='姓名'></input>
+      </view>
+      <view class='name-box'>
+        <input placeholder='手机号码'></input>
+      </view>
+      <view class='name-box'>
+        <input placeholder='报名意向'></input>
+      </view>
+      <view class='submit'>提交</view>
+    </view>
+  </view>
+</view>
