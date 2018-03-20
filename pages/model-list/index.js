@@ -3,6 +3,23 @@ var P = require('../../lib/wxpage')
 P('index', {
   data: {
     navId:'1',
+    dataArray: [
+      {
+        isVip: true,
+        id: 1,
+        name: "会计招生主题"
+      },
+      {
+        isVip: false,
+        id: 1,
+        name: "会计招生专题"
+      },
+      {
+        isVip: false,
+        id: 1,
+        name: "会计招生主题"
+      }
+    ]
   },
 
   onLaunch: function () {

@@ -11,26 +11,12 @@
     </view>
   </view>
   <view class='class-list'>
-    <view class='class-item'>
+    <view class='class-item' wx:for-index="idx"  wx:for="{{dataArray}}" wx:for-item="item">
       <view class='img-box'>
         <image src='../../image/model/banner.jpg' class='class-img'></image>
-        <image src='../../image/model/VIP.png' class='vip-img' mode='aspectFit'></image>
+        <image wx:if="{{item.isVip}}" src='../../image/model/VIP.png' class='vip-img' mode='aspectFit'></image>
       </view>
-      <view class='class-name'>会计招生主题</view>
-    </view>
-     <view class='class-item'>
-      <view class='img-box'>
-        <image src='../../image/model/banner01.jpg' class='class-img'></image>
-        <image src='../../image/model/VIP.png' class='vip-img' mode='aspectFit'></image>
-      </view>
-      <view class='class-name'>会计招生主题</view>
-    </view>
-     <view class='class-item'>
-      <view class='img-box'>
-        <image src='../../image/model/banner01.jpg' class='class-img'></image>
-        <image src='../../image/model/VIP.png' class='vip-img' mode='aspectFit'></image>
-      </view>
-      <view class='class-name'>会计招生主题</view>
+      <view class='class-name'>{{item.name}}{{idx}}</view>
     </view>
   </view>
 </view>

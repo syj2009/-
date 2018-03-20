@@ -33,7 +33,7 @@
 
 .class-list {
   margin-top: 20rpx;
-  padding: 20rpx 40rpx;
+  padding: 20rpx 30rpx;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,20 +42,21 @@
 }
 
 .class-item {
-  width: 320rpx;
+  width: 330rpx;
   margin-bottom: 40rpx;
 }
 
 .img-box {
-  width: 320rpx;
-  height: 192rpx;
+  width: 330rpx;
+  height: 198rpx;
   position: relative;
   border: 1rpx solid #e5e5e5;
+  border-radius: 10rpx;
 }
 
 .class-img {
-  width: 320rpx;
-  height: 192rpx;
+  width: 330rpx;
+  height: 198rpx;
 }
 
 .vip-img {
