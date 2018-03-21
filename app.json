@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/business-card/index",
+    "pages/index/index",
+    "pages/personal-information/index",
     "pages/browse-failure/index",
     "pages/mine/index",
-    "pages/personal-information/index",
-    "pages/index/index",
     "pages/model-website-edite/index",
     "pages/model-website/index",
     "pages/model-class-edite/index",

@@ -1,7 +1,6 @@
-/************个人信息页面****************/
+/************我的名片页面****************/
 var P = require('../../lib/wxpage')
 P('index', {
-  
   data: {
 
   },
@@ -14,7 +13,7 @@ P('index', {
    * **/
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '个人信息'
+      title: '我的名片'
     })
     wx.showShareMenu({
       withShareTicket: true

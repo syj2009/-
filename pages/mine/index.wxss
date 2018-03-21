@@ -81,6 +81,9 @@ page{
   margin-right: 40rpx;
   border-bottom: 1rpx solid #eaeaea;
 }
+.binding-mechanism,.feedback{
+  border-bottom: 0;
+}
 .card-img{
   width: 36rpx;
   height: 30rpx;
