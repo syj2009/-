@@ -1,38 +1,59 @@
 <view class='contain'>
-  <view class='swiper-container'>
-    <swiper  indicator-dots="true" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{imgUrls}}">
-            <swiper-item>
-                <image src="{{item}}" class="slide-image"  mode="scaleToFill"/>
-            </swiper-item>
-        </block>
-    </swiper>
+  <view wx:if="{{isShow}}">
+    <view class='swiper-container'>
+      <swiper  indicator-dots="true" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgUrls}}"  wx:for-item="item" wx:key="unique" wx:for-index="index">
+              <swiper-item>
+                  <image src="{{item.ImgUrl?item.ImgUrl:'../../image/browse_failure/browse_failure.png'}}" class="slide-image"  mode="scaleToFill" binderror="errorBannerFunction" data-id='{{index}}'/>
+              </swiper-item>
+          </block>
+      </swiper>
+    </view>
   </view>
   <view class='model-list'>
-    <view class='model-item'>
-      <view class='top-view'>
-        <view class='show-img'>
-          <image src='../../image/index/banner.png' class='model-img'></image>
-        </view>
-        <view class='school-view'>
-          <view class='school-title'>青岛托普学校</view>
-          <view class='label-list'>
-            <text class='websiteItem'>微官网</text>
-            <text class='classItem'>微班级</text>
-            <text class='statuesItem'>已停用</text>
+    <view wx:if="{{myProgrammeList.length>0}}">
+      <scroll-view scroll-y='true' style='height:100%;background-color:#fff;' bindscrolltolowe="loadMore">
+        <view wx:for="{{myProgrammeList}}" wx:for-item="item" wx:key="unique" wx:for-index="index">
+          <view class='model-item'>
+            <view class='top-view'>
+              <view class='show-img'>
+                <image src='{{item.ProgrammeImg?item.ProgrammeImg:"../../image/browse_failure/browse_failure.png"}}' class='model-img' binderror="errorFunction" data-id='{{index}}'></image>
+              </view>
+              <view class='school-view'>
+                <view class='school-title'>{{item.ProgrammeName}}</view>
+                <view class='label-list'>
+                  <view wx:for="{{item.ProgrammeTag}}" wx:for-item="itemTag" wx:for-index="idx" wx:key="uniques">
+                    <view wx:if="{{idx==0}}">
+                      <view wx:if="{{item.TemplateTypeId==1}}">
+                        <text class='websiteItem'>{{itemTag}}</text>
+                      </view>
+                      <view wx:elif="{{item.TemplateTypeId== 2}}">
+                        <text class='classItem'>{{itemTag}}</text>
+                      </view> 
+                    </view>
+                    <view wx:else>
+                      <text class='statuesItem'>{{itemTag}}</text>
+                    </view>
+                  </view>   
+                </view>
+              </view>
+            </view>
+            <view class='bottom-view'>
+              <view class='btn-view'>
+                <image image src='../../image/index/zhuanfa.png' class='btn-icon'></image>
+                <button class="weui-btn mini-btn btn-index" type="default" open-type="share">转发</button>
+              </view>
+              <view class='btn-more'>
+                <image image src='../../image/index/setting.png' class='btn-icon'></image>
+                <button class="weui-btn mini-btn btn-index" type="default"  bindtap='openAcctionSheet' data-id='{{item.ProgrammeId}}'>更多</button>
+              </view>
+            </view>
           </view>
         </view>
-      </view>
-      <view class='bottom-view'>
-        <view class='btn-view'>
-          <image image src='../../image/index/zhuanfa.png' class='btn-icon'></image>
-          <button class="weui-btn mini-btn btn-index" type="default" open-type="share">按钮</button>
-        </view>
-        <view class='btn-more'>
-          <image image src='../../image/index/setting.png' class='btn-icon'></image>
-          <button class="weui-btn mini-btn btn-index" type="default"  bindtap='openAcctionSheet'>按钮</button>
-        </view>
-      </view>
+      </scroll-view>
+    </view>
+    <view wx:else> 
+      <view class='noDataView'>暂时没有相关的招生方案</view>
     </view>
   </view>
   <image image src='../../image/index/add-icon.png' class='add-model' bindtap='goModelList'></image>

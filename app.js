@@ -1,41 +1,110 @@
 var d = new Date()
 require('./lib/wxpage').A({
   data: {
-    host: 'https://testapi.nbig.com.cn',
+    host: 'https://devkbmapi.huikao8.cn',
+    isFirstGo: true,
   },
   config: {
     route: '/pages/$page',
   },
   onLaunch: function (opts) {
     var that = this;
+    //配置用户设置
+    that.getSettingStatues();
+    //获取用户openid
+    that.login();
     wx.showShareMenu({
       withShareTicket: true
     })
-    // wx.login({
-    //   success: function (res) {
-    //     var wxUserInfo = wx.getStorageSync('wxUserInfo')
-    //     wx.request({
-    //       url: that.data.host + '/api/Account/GetUserInfo',
-    //       data: {
-    //         'WeChatAccount': res.code,
-    //         'HeadImg': "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83er2O1yrwic2ntc5qy3qLpJic1ASYnzRFAicMbw1l10ic3d9hBDlXet34klvg4niaoFO1fYG8Ck0IvtHZvQ/0",
-    //         'UserName': "关关雎鸠",
-    //       },
-    //       method: 'POST',
-    //       dataType: 'json',
-    //       success: function (res) {
-    //         if (res.data.Msg) {
-    //           console.log("wxOpenId:" + res.data.Info.OpenId)
-    //           wx.setStorageSync('wxUserId', res.data.Info.UserId);
-    //           wx.setStorageSync('wxOpenId', res.data.Info.OpenId);
-    //           wx.setStorageSync('StudyNumber', res.data.Info.StudyNumber);
-    //         }
-    //       }
-    //     })
-    //   }
-    // })
+    
   },
   onShow: function () {
     // Do something
   },
+  getSettingStatues:function(){
+    var that = this;
+    wx.getSetting({
+      success:function(res){
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+JSON.stringify(res))
+        if(!res.authSetting['scope.userInfo']){
+          wx.authorize({
+            scope: 'scope.userInfo',
+            success(data){
+              that.setData({
+                isFirstGo:false
+              })
+            },
+            fail(){
+              wx.openSetting({
+              })
+            },
+          })
+        }
+      }
+    });
+  },
+  login:function(){
+    var that = this;
+    wx.login({
+      success: function (res) {
+        wx.request({
+          url: that.data.host + '/api/Account/GetOpenIDByCode',
+          data: {
+            'Code': res.code,
+          },
+          method: 'POST',
+          dataType: 'json',
+          success: function (res) {
+            if (res.data.Msg) {
+              wx.setStorageSync("Openid",res.data.Info.Openid);
+              if (that.data.isFirstGo){
+                wx.request({
+                  url: that.data.host + '/api/Account/SaveUserInfo',
+                  data: {
+                    "Openid": res.data.Info.Openid,
+                    "HeaderImge": "", 
+                    "Name": "", 
+                    "Phone":"",
+                    "QrCode": "", 
+                    "TrainingName": "", 
+                    "TrainingAdd": "", 
+                  },
+                  method: 'POST',
+                  dataType: 'json',
+                  success: function (res) {
+                    wx.setStorageSync("userId", res.data.Info.Id);
+                  },
+                });
+              }else{
+                wx.getUserInfo({
+                  success: function (res) {
+                    var userInfo = res.userInfo;
+                    wx.setStorageSync("userInfo", res.userInfo);
+                    wx.request({
+                      url: that.data.host + '/api/Account/SaveUserInfo',
+                      data: {
+                        "Openid": res.data.Info.Openid,
+                        "HeaderImge": userInfo.avatarUrl,
+                        "Name": userInfo.nickName,
+                        "Phone": "",
+                        "QrCode": "",
+                        "TrainingName": "",
+                        "TrainingAdd": "",
+                      },
+                      method: 'POST',
+                      dataType: 'json',
+                      success: function (res) {
+                        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2" + JSON.stringify(res));
+                      },
+                    });
+                    
+                  }
+                })
+              }
+            }
+          }
+        })
+      }
+    })
+  }
 })
