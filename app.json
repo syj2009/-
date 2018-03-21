@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/received-card/index",
     "pages/business-card/index",
     "pages/index/index",
     "pages/personal-information/index",

@@ -1,13 +1,15 @@
-<view class='contain' style="background:url('../../image/mine/img_xinfeng.png') no-repeat;background-size:100% 100%;-moz-background-size:100% 100%;">
+<view class='contain' style="background:url('../../image/mine/img_beijing.png') no-repeat;background-size:100% 100%;-moz-background-size:100% 100%;">
   <view class='content'>
     <image class='head' src='../../image/mine/head.jpg'></image>
     <view class='name'>程梓欣</view>
     <view class='institutionName'>青岛托普培训学校</view>
     <view class='view-mobile'><text class='mobile-prompt'>手机号码:</text><text class='mobile'>13367890431</text></view>
     <view class='view-address'><text class='address-prompt'>机构地址:</text><view class='address'>青岛市李沧区金水路1577-10号（虎山军体中心东侧）</view></view>
-  </view>
-  <view class='view-code' style="background: url('../../image/mine/img_xuxian.png') no-repeat;background-size:100% 100%;-moz-background-size:100% 100%;">
+  <view class='view-code' style="background: url('../../image/mine/img_xuxian_big.png') no-repeat;background-size:100% 100%;-moz-background-size:100% 100%;">
     <image class='QRCode' src='../../image/mine/QRCode.png'></image>
   </view>
   <text class='prompt'>长按二维码可加老师好友</text>
+  </view>
 </view>
+
+  
