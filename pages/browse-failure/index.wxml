@@ -1,24 +1,24 @@
-<view class ="contain">
-  <!-- <view class="modal-mask" bindtap="hideModal">
-    <view class= "modal-dialog">
+<view class="contain">
+  <view class="modal-mask" wx:if="{{showModal}}">
+    <view class="modal-dialog">
       <view class="modal-title">请选择举报原因</view>
       <view class="modal-content">
-        <view> 0000000</view>
+        <view class="content-detail" wx:for="{{dataArray}}" wx:key="alertpage" wx:for-item="item" bindtap='itemclick' id="{{index}}">
+          <text class="{{item.isSelect?'text-select':'text-common'}}">{{item.name}}</text>
+          <image wx:if="{{item.isSelect}}" class="select-img" src='../../image/browse_failure/ic_choice.png'> </image>
+        </view>
       </view>
-      <view class="modal-footer">提交</view>
+      <view class="modal-footer" bindtap='submitclick'>提交</view>
     </view>
-  </view>  -->
-    <view>
-    <view class = "img-cover">
-      <image class = "failure-img" src='../../image/browse_failure/browse_failure.png'>
+  </view>
+  <!-- <view>
+    <view class="img-cover">
+      <image class="failure-img"  src='../../image/browse_failure/browse_failure.png'>
       </image>
     </view>
-    <view class = "text-cover"> 
-      <text class = "failure-text"> 该页面已失效!
-      </text>
+    <view class="text-cover">该页面已失效!
     </view>
-    <view class = "student-btn">
-      <text class = "student-text" bindtap = "makeClick">制作我的招生方案</text>
+    <view class="student-btn" bindtap="makeClick"> 制作我的招生方案
     </view>
-  </view>  
+  </view>  -->
 </view>
