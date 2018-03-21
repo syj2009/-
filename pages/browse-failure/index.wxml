@@ -1,5 +1,5 @@
 <view class="contain">
-  <view class="modal-mask" wx:if="{{showModal}}">
+  <!-- <view class="modal-mask" wx:if="{{showModal}}">
     <view class="modal-dialog">
       <view class="modal-title">请选择举报原因</view>
       <view class="modal-content">
@@ -10,8 +10,8 @@
       </view>
       <view class="modal-footer" bindtap='submitclick'>提交</view>
     </view>
-  </view>
-  <!-- <view>
+  </view> -->
+   <view>
     <view class="img-cover">
       <image class="failure-img"  src='../../image/browse_failure/browse_failure.png'>
       </image>
@@ -20,5 +20,5 @@
     </view>
     <view class="student-btn" bindtap="makeClick"> 制作我的招生方案
     </view>
-  </view>  -->
+  </view>  
 </view>

@@ -44,7 +44,7 @@
         "text": "跟进"
       },
       {
-        "pagePath": "pages/mine/index",
+        "pagePath": "pages/index/index",
         "iconPath": "image/index/people-gray.png",
         "selectedIconPath": "image/index/people-red.png",
         "text": "我的"

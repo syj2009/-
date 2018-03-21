@@ -82,10 +82,14 @@ P('index', {
   onPullDownRefresh: function () {
     //获取列表数据
     this.getModelList();
-    wx.stopPullDownRefresh();
+    setTimeout(function(){
+      wx.stopPullDownRefresh();
+    },2000);
   },
 
+  //上拉加载更多
   loadMore:function(){
+    console.log("上啦加载啦");
     var openId = wx.getStorageSync("Openid");
     var pageNum = this.data.pageNum;
     var that = this;
