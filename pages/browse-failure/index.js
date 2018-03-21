@@ -47,11 +47,12 @@ P('index', {
     })
   },
 
-  //制作我的招生方案
+  //制作我的招生方案 跳转到index首页
   makeClick: function () {
-    wx.showToast({
-      title: '制作我的招生方案',
+    wx.switchTab({
+      url: '/pages/index/index',
     })
+
   },
 
   //选择举报原因
@@ -60,7 +61,7 @@ P('index', {
     var index = e.currentTarget.id;
     var tempBool = self.data.dataArray[index].isSelect
     for (var i = 0; i < this.data.dataArray.length; i++) {
-      if(index == i){
+      if (index == i) {
         self.data.dataArray[i].isSelect = !tempBool;
       } else {
         self.data.dataArray[i].isSelect = false;
@@ -74,26 +75,27 @@ P('index', {
   },
 
   //提交举报原因
-  submitclick:function () {
+  submitclick: function () {
     var submitId = "";
-    for (var i = 0; i < this.data.dataArray.length; i++){
+    for (var i = 0; i < this.data.dataArray.length; i++) {
       if (this.data.dataArray[i].isSelect == true) {
         submitId = this.data.dataArray[i].id;
         break;
       }
     }
     //console.log("举报原因id ....", submitId)
-    if (submitId == ""){
+    if (submitId == "") {
       wx.showToast({
         title: '请选择举报原因',
       })
-    }else {
+    } else {
       wx.showToast({
         title: '举报成功',
       })
       this.setData({
-        showModal:false
+        showModal: false
       });
     }
+
   }
 })
