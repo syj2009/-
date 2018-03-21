@@ -20,6 +20,7 @@ page{
 
 .text-cover {
   margin: 0 auto;
+  padding-top: 40rpx;
   margin-bottom: 100rpx;
   text-align: center;
 }
@@ -41,5 +42,54 @@ page{
   font: 40rpx;
   height: 80rpx;
   line-height: 80rpx;
- 
+}
+
+/* //弹出框// */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 9999;
+  background: #fff; 
+  margin: -180rpx 105rpx;
+  border-radius: 10rpx;
+}
+
+.modal-title {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 36rpx;
+  color: #333;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.modal-content {
+  padding: 50rpx 40rpx;
+  height: 200rpx;
+}
+
+.modal-footer {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  font: 36rpx;
+  color: #fff;
+  background: #de644f;
+  text-align: center;
 }
