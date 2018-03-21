@@ -1,0 +1,101 @@
+page{
+  margin: 0 auto;
+  height: 100%;
+  background-color: #eee;
+}
+.contain{
+  width: 100%;
+  height: 290rpx;
+  margin: auto;
+  text-align: center;
+}
+/* 跟进列表 */
+.follow-search{
+  width: 710rpx;
+  margin: 30rpx auto 20rpx;
+  overflow: hidden;
+}
+.follow-search-left{
+  width: 580rpx;
+  float: left;
+  font-size: 28rpx;
+}
+.search-input{
+  height: 50rpx;
+  background: #fff;
+  border: none;
+  border-radius: 50rpx;
+  color: #999;
+  text-align: left;
+  padding: 10rpx 20rpx;
+}
+.follow-search-right{
+  float: left;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  line-height: 2.5;
+}
+.icon_search{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 0 0 10rpx;
+}
+.text-red{
+  color: #de644f;
+}
+/* 筛选页 */
+.follow-state{
+  width: 100%;
+}
+.state-content{
+  padding: 20rpx;
+  background-color: #fff;
+  text-align: left;
+}
+.state-title{
+  text-align:left;
+  color:#666;
+  font-size:34rpx;
+  width:100%;
+  display:inline-block;
+  padding-left: 25rpx;
+
+}
+/* 标签 */
+.search-gray,
+.search-red{
+  padding: 10rpx 25rpx;
+  background-color: #f7f7f7;
+  font-size: 28rpx;
+  color: #999;
+  border-radius: 30rpx;
+  margin: 10rpx 20rpx 10rpx 0; 
+  border: 1rpx solid #eaeaea;
+  display: inline-block;
+  text-align: center;
+}
+.search-red{
+  color: #fff;
+  background-color: #de644f;
+}
+/* 按钮 */
+.state-btn{
+  margin-top: 100rpx;
+  text-align: center;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+.state-btn-reset,
+.state-btn-sure{
+  font-size: 36rpx;
+  width: 330rpx;
+  color: #666;
+  background-color: #fff;
+  display: inline-block;
+}
+.state-btn-sure{
+  background: #de644f;
+  color: #fff;
+  margin-left:30rpx;
+}

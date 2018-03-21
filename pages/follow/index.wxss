@@ -1,0 +1,77 @@
+
+page{
+  margin: 0 auto;
+  height: 100%;
+  background-color: #eee;
+}
+.contain{
+  width: 710rpx;
+  height: 290rpx;
+  margin: auto;
+  text-align: center;
+}
+/* 跟进列表 */
+.follow-search{
+  margin: 30rpx 0 20rpx;
+  overflow: hidden;
+}
+.follow-search-left{
+  width: 580rpx;
+  float: left;
+  font-size: 28rpx;
+}
+.search-input{
+  height: 50rpx;
+  background: #fff;
+  border: none;
+  border-radius: 50rpx;
+  color: #999;
+  text-align: left;
+  padding: 10rpx 20rpx;
+}
+.follow-search-right{
+  float: left;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  line-height: 2.5;
+}
+.icon_search{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 0 0 10rpx;
+}
+.follow-href{
+  color: #333;
+  font-size: 36rpx; 
+  clear: both;
+}
+.follow-href-margin{
+  border: 1rpx #eaeaea solid;
+  background-color: #fff;
+  overflow: hidden;
+  width:658rpx;
+  padding: 25rpx;
+  margin: 20rpx 0;
+}
+.follow-href text{
+  color: #999;
+  font-size: 26rpx;
+}
+.href-left{
+  width: 49%;
+  float: left;
+  text-align: left;
+}
+.href-right{
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+/*加号浮动  */
+.add-model {
+  position: fixed;
+  width: 80rpx;
+  height: 80rpx;
+  bottom: 20rpx;
+  left: 45%;
+}

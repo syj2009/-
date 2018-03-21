@@ -1,0 +1,54 @@
+<view class='contain'>
+  <view class="follow-search">
+      <view class="follow-search-left">
+         <input class="search-input" type='type' placeholder="请输入客户的名称或电话" focus />
+      </view>
+      <view class="follow-search-right">
+        <text>筛选</text>
+        <image src="../../image/follow/icon_shaixuan.png" class="icon_search"></image>
+      </view>
+  </view>
+  <view class='follow-href'>
+    <navigator url="../../pages/content/follow/search/search" class='follow-href-margin'>
+      <view class="href-left">
+        <view>链接筛选页</view>
+        <text>13688889999</text>
+      </view>
+      <view class="href-right">
+        <view>初访</view>
+        <text>2017-05-22 15:32</text>
+      </view>
+    </navigator>
+    <navigator url="../../pages/content/follow/write/write" class='follow-href-margin'>
+      <view class="href-left">
+        <view>链接写跟进页</view>
+        <text>13688889999</text>
+      </view>
+      <view class="href-right">
+        <view>初访</view>
+        <text>2017-05-22 15:32</text>
+      </view>
+    </navigator>
+    <navigator url="../../pages/content/follow/details/details" class='follow-href-margin'>
+      <view class="href-left">
+        <view>链接详情页</view>
+        <text>13688889999</text>
+      </view>
+      <view class="href-right">
+        <view>初访</view>
+        <text>2017-05-22 15:32</text>
+      </view>
+    </navigator>
+    <navigator url="../../pages/content/follow/details/details" class='follow-href-margin'>
+      <view class="href-left">
+        <view>链接详情页</view>
+        <text>13688889999</text>
+      </view>
+      <view class="href-right">
+        <view>初访</view>
+        <text>2017-05-22 15:32</text>
+      </view>
+    </navigator>
+  </view>
+    <image src='../../image/index/add-icon.png' class='add-model' bindtap='goModelList'></image>
+</view>
