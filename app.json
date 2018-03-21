@@ -1,9 +1,5 @@
 {
   "pages":[
-    "pages/statistical-data/index",
-    "pages/mine/index",
-    "pages/visitor/index",
-    "pages/business-card/index",
     "pages/index/index",
     "pages/received-card/index",
     "pages/personal-information/index",
@@ -13,7 +9,11 @@
     "pages/model-class-edite/index",
     "pages/model-class/index",
     "pages/model-list/index",
-    "pages/follow/index"
+    "pages/follow/index",
+    "pages/statistical-data/index",
+    "pages/mine/index",
+    "pages/visitor/index",
+    "pages/business-card/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
