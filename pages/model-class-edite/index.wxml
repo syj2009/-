@@ -1,0 +1,209 @@
+<view class='contain'>
+  <view  class="{{coverShow?'bg-black':'hidden'}}">
+    <view class='cover-view'>
+      <view class='cover-title-view'>
+        <text class='cover-title-name'>方案封面</text>
+        <image src='../../image/modelDetail/banner.png' class='cover-title-img'></image>
+      </view>
+      <view class='cover-name-view'>
+        <text class='cover-title-name'>方案名称</text>
+        <text class='cover-title-school'>青岛托普学校</text>
+      </view>
+      <view class='cover-desc-view'>
+        <view class='cover-title-name fit-margin'>简介</view>
+        <view class='textarea-box'>
+          <textarea placeholder='请填写封面信息简介' class='textarea-style'></textarea>
+          <text class='text-area-number'>{{chartStatues.currentChartLength}}/{{chartStatues.maxChartLength}}</text>
+        </view>
+      </view>
+      <view class='price-view'>
+        <text class='cover-title-name'>报名费用（元）</text>
+        <text class='cover-title-name-red'>166</text>
+      </view>
+      <view class='btn-box'>
+        <view class='cancle-btn' bindtap='cancleClick' data-id='2'>取消</view>
+        <view class='submit-btn' bindtap='submitClick' data-id='2'>确定</view>
+      </view>
+    </view>
+  </view>
+  <view class="{{alertShow?'bg-black':'hidden'}}">
+    <view class='alert-view'>
+      <view class='text-area-box'>
+        <textarea placeholder='请输入字数' class='text-area-style' maxlength='{{chartStatues.maxChartLength}}' bindinput='chartNumberChange'></textarea>
+        <text class='text-area-number'>{{chartStatues.currentChartLength}}/{{chartStatues.maxChartLength}}</text>
+      </view>
+      <view class='btn-box'>
+        <view class='cancle-btn' bindtap='cancleClick' data-id='1'>取消</view>
+        <view class='submit-btn' bindtap='submitClick' data-id='1'>确定</view>
+      </view>
+    </view>
+  </view>
+  <view class='website-bg-img' style="background-image: url('../../image/modelDetail/banner.png')">
+    <view class='head-view'>
+      <view class='border-blue' bindtap='changeImage' data-id='1'>
+        <view class='edite-box' bindtap='changeImage' data-id='1'>
+          <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+        </view>
+        <image src='{{headImg}}' class='head-img'></image>
+      </view>
+    </view>
+    <view class='class-describe-view'>
+      <view class='border-blue-position' bindtap='changeImage' data-id='2'>
+        <view class='edite-box' bindtap='changeImage' data-id='2'>
+          <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+        </view>
+        <image src='{{courseImg}}' class='class-describe-img'></image>
+      </view>
+    </view>
+    <view class='fit-describe-view'>
+      <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
+        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
+          <view class='edite-box' bindtap='changeText' data-id='1'>
+            <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+          </view>
+          <text class='input-box'>班级介绍</text>
+        </view> 
+      </view>
+      <view class='content-describe'>
+        <view class='text-border-blue' bindtap='changeText' data-id='1'>
+          <view class='edite-box' bindtap='changeText' data-id='1'>
+            <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+          </view>
+          <text> 法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间</text>
+        </view>
+      </view>
+      <view>
+        <view class='border-blue-position' bindtap='changeImage' data-id='2'>
+          <view class='edite-box' bindtap='changeImage' data-id='2'>
+            <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+          </view>
+          <image src='{{classImg}}' class='fit-describe-img'></image>
+        </view>
+      </view>
+    </view>
+    <view class='fit-describe-view'>
+      <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
+        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
+          <view class='edite-box' bindtap='changeText' data-id='1'>
+            <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+          </view>
+          <text class='input-box'>适合人群</text>
+        </view>  
+      </view>
+      <view class='content-describe'>
+        <view class='text-border-blue' bindtap='changeText' data-id='1'>
+          <view class='edite-box' bindtap='changeText' data-id='1'>
+            <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+          </view>
+          <text> 法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间</text>
+        </view>
+      </view>
+      <view>
+        <view class='border-blue-position' bindtap='changeImage' data-id='2'>
+          <view class='edite-box' bindtap='changeImage' data-id='2'>
+            <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+          </view>
+          <image src='{{peopleImg}}' class='fit-describe-img'></image>
+        </view>
+      </view>
+    </view>
+    <view class='fit-describe-view'>
+      <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
+        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
+          <view class='edite-box' bindtap='changeText' data-id='1'>
+            <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+          </view>
+          <text class='input-box'>上课时间</text>
+        </view>   
+      </view>
+      <view class='content-describe'>
+        <view class='text-border-blue' bindtap='changeText' data-id='1'>
+          <view class='edite-box' bindtap='changeText' data-id='1'>
+            <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+          </view>
+          <text> 法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间</text>
+        </view>
+      </view>
+    </view>
+    <view class='fit-describe-view'>
+      <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
+        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
+          <view class='edite-box' bindtap='changeText' data-id='1'>
+            <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+          </view>
+          <text class='input-box'>班级课程</text>
+        </view>   
+      </view>
+      <view class='course-list'  wx:for="{{classList}}" wx:for-index="idx" wx:for-item="itemName">
+        <view class='course-item'>
+          <view class='course-img-box'>
+            <view class='border-blue-position' bindtap='changeImage' data-id='2'>
+              <view class='edite-box' bindtap='changeImage' data-id='2'>
+                <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+              </view>
+              <image src='{{itemName.classItemImg}}' class='fit-describe-img'></image>
+            </view>
+            <view class='fit-describe-span' bindtap='changeText' data-id='1'>
+              <view class='edite-box' bindtap='changeText' data-id='1'>
+                <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+              </view>
+              <view class=''>解密核心考点，送教材+VIP题库（每科含有4套押题）免费重学保障一次</view>
+            </view>
+          </view>
+          <view class='text-border-blue' bindtap='changeText' data-id='1'>
+            <view class='edite-box' bindtap='changeText' data-id='1'>
+              <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+            </view>
+            <text class='course-title'> 初级会计工作事务</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='school-info'>
+      <view>
+        <view class='border-blue' bindtap='changeImage' data-id='1'>
+          <view class='edite-box' bindtap='changeImage' data-id='1'>
+            <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+          </view>
+          <image src='{{headImg}}' class='school-logo'></image>
+        </view>
+      </view>
+      <view class='school-title'>
+        <view class='text-border-blue' bindtap='changeText' data-id='1'>
+          <view class='edite-box' bindtap='changeText' data-id='1'>
+            <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+          </view>
+          <text> 会考吧学院</text>
+        </view>
+      </view>
+      <view>
+        <view class='border-blue' bindtap='changeImage' data-id='1'>
+          <view class='edite-box' bindtap='changeImage' data-id='1'>
+            <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+          </view>
+          <image src='{{headImg}}' class='school-code' mode="scaleToFill"></image>
+        </view>
+      </view>
+      <view class='code-describe'>
+        <view>
+          <view class='text-border-blue' bindtap='changeText' data-id='1'>
+            <view class='edite-box' bindtap='changeText' data-id='1'>
+              <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+            </view>
+            <text> 会考吧学院</text>
+          </view>
+        </view>
+      </view>
+      <view class='input-view'>
+        <input placeholder='姓名' class='input-name'></input>
+      </view>
+      <view class='input-view'>
+        <input placeholder='手机号码' class='input-name'></input>
+      </view>
+    </view>
+    <view class='signUp'>报名</view>
+  </view>
+  <view class='nav-bottom'>
+    <view class='save-btn' bindtap='saveClick'>保存</view>
+  </view>
+</view>

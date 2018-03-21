@@ -1,0 +1,59 @@
+page{
+  background-color: #eee;
+}
+.information-content{
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+.text{
+  font-size: 34rpx;
+  color: #333;
+}
+.view-head,.view-name,.view-mobile,.view-institutionName,.view-institutionAddress,.view-QR-code{
+  width: 690rpx;
+  height: 140rpx;
+  margin:auto;
+  line-height: 140rpx;
+  border-bottom: 1rpx solid #eaeaea;
+}
+.information-image{
+  float: right;
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 25rpx;
+  border-radius: 45rpx;
+}
+.view-name,.view-mobile,.view-institutionName,.view-institutionAddress{
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.name,.mobile,.institutionName,.institutionAddress{
+  text-align: right;
+  float: right; 
+  height: 88rpx;
+  color: #999;
+  font-size: 34rpx;
+}
+.view-QR-code{
+  border-bottom: 0;
+}
+.code{
+  width: 90rpx;
+  height: 90rpx;
+  float: right;
+  margin-top: 25rpx;
+}
+.button{
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 30rpx;
+  right: 30rpx;
+  bottom:30rpx;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #de644f;
+}

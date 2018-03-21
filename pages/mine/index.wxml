@@ -9,13 +9,13 @@
       <view class='name'>程梓欣</view>
       <view class='school-name'>青岛托普培训学校</view>
     <view class='bianji'>
-      <image class='bianji-img' src='../../image/mine/icon_bianji.png'></image>
+      <image class='bianji-img' src='../../image/mine/icon_bianji.png'  bindtap='toPersonalInformation'></image>
     </view>
     </view>
   </view>
   <view class='content'>
     <view class='visiting-card'>
-      <image class='card-img' src='../../image/mine/icon_mingpian.png'></image>
+      <image class='card-img' src='../../image/mine/icon_mingpian.png' bindtap='toBusinessCard'></image>
       <text>我的名片</text>
       <image class='jinru' src='../../image/mine/icon_jinru.png'></image>
     </view>

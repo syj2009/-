@@ -1,92 +1,75 @@
-<view class='contain'>
-  <view class='website-bg-img' style="background-image: url('../../image/modelDetail/banner.png')">
-    <view class='head-view'>
-      <image src='../../image/modelDetail/wenzi.png' class='head-img'></image>
+<view class="contain">
+  <view class='website-bg-img' style="background-image: url('../../image/modelDetail/bg.png')">
+    <view>
+      <image src='../../image/modelDetail/website-banner.png' class='banner-top'></image>
     </view>
-    <view class='class-describe-view'>
-      <image src='../../image/modelDetail/banner001.png' class='class-describe-img'></image>
+    <view class='border-bg-img'>
+      <view class='img-box-center'><image class='head-img' src='../../image/modelDetail/website-banner.png'></image></view>
+      <view class='organizationName'>会考吧学院</view>
+      <view class='organizationContent'>分开了大开发阶段克里斯解放军大世界反垄断局as菲拉斯点附近的拉升房价</view>
+      <image class='left-gou' src='../../image/modelDetail/003.png'></image>
+      <image class='right-gou' src='../../image/modelDetail/003.png'></image>
     </view>
-    <view class='fit-describe-view'>
-      <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
-        <input placeholder='班级介绍' class='input-box' placeholder-class='input-box'></input> 
+
+    <view class='border-bg-img'>
+      <view class='head-title' style="background-image: url('../../image/modelDetail/titleBox.png')">  
+        <text>机构优势</text>
       </view>
-      <view class='content-describe'>
-        法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间
-      </view>
-      <view>
-        <image src='../../image/modelDetail/banner002.png' class='fit-describe-img'></image>
-      </view>
-    </view>
-    <view class='fit-describe-view'>
-      <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
-        <input placeholder='适合人群' class='input-box' placeholder-class='input-box'></input> 
-      </view>
-      <view class='content-describe'>
-        法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间
-      </view>
-      <view>
-        <image src='../../image/modelDetail/banner002.png' class='fit-describe-img'></image>
-      </view>
-    </view>
-    <view class='fit-describe-view'>
-      <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
-        <view class='input-box'>上课时间</view> 
-      </view>
-      <view class='content-describe'>
-        法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间
-      </view>
-    </view>
-    <view class='fit-describe-view'>
-      <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
-        <input placeholder='班级课程' class='input-box' placeholder-class='input-box'></input> 
-      </view>
-      <view class='course-list'>
-        <view class='course-item'>
-          <view class='course-img-box'>
-            <image src='../../image/modelDetail/banner002.png' class='fit-describe-img'></image>
-            <view class='fit-describe-span'>解密核心考点，送教材+VIP题库（每科含有4套押题）免费重学保障一次</view>
+      <view class='institution-advantage-list'>
+        <view class='institution-advantage-item'>
+          <view class='float-left'>
+            <image src='../../image/modelDetail/banner001.png' class='institution-img'></image>
           </view>
-          <view class='course-title'>初级会计工作事务</view>
-        </view>
-        <view class='course-item'>
-          <view class='course-img-box'>
-            <image src='../../image/modelDetail/banner002.png' class='fit-describe-img'></image>
-            <view class='fit-describe-span'>解密核心考点，送教材+VIP题库（每科含有4套押题）免费重学保障一次</view>
+          <view class='float-left institution-descr'>
+            分开了大开发阶段克里斯解放军大世界反垄断局as菲拉斯点附近的拉升房价;
           </view>
-          <view class='course-title'>初级会计工作事务</view>
         </view>
       </view>
-      
-
+      <image class='left-gou' src='../../image/modelDetail/003.png'></image>
+      <image class='right-gou' src='../../image/modelDetail/003.png'></image>
     </view>
-    <view class='school-info'>
-      <view>
-        <image src='../../image/modelDetail/banner005.png' class='school-logo'></image>
+    
+    <view class='border-bg-img'>
+      <view class='head-title' style="background-image: url('../../image/modelDetail/titleBox.png')">  
+        <text>机构优势</text>
       </view>
-      <view class='school-title'>
-        <input placeholder='会考吧学院'></input>
-      </view>
-      <view>
-        <image src='../../image/modelDetail/banner005.png' class='school-code' mode="scaleToFill"></image>
-      </view>
-      <view class='code-describe'>
-        <view>
-          <text>会考吧学院</text>
+      <view class='project-list'>
+        <view class='project-item'>
+          <view>
+            <image src='../../image/modelDetail/banner001.png' class='project-img'></image>
+          </view>
+          <view class='project-title'>学历教育</view>
         </view>
-        <view>
-          <text>会考吧学院</text>
+        <view class='project-item'>
+          <view>
+            <image src='../../image/modelDetail/banner001.png' class='project-img'></image>
+          </view>
+          <view class='project-title'>学历教育</view>
         </view>
-      </view>
-      <view class='input-view'>
-        <input placeholder='姓名' class='input-name'></input>
-      </view>
-      <view class='input-view'>
-        <input placeholder='手机号码' class='input-name'></input>
+        <view class='project-item'>
+          <view>
+            <image src='../../image/modelDetail/banner001.png' class='project-img'></image>
+          </view>
+          <view class='project-title'>学历教育学历教育学历教育</view>
+        </view>
       </view>
     </view>
 
-    <view class='signUp'>报名</view>
-
+    <view class='sign-up-view'>
+      <view class='code-view'>
+        <image class='code-img' src='../../image/modelDetail/banner001.png'></image>
+      </view>
+      <view class='code-descr'>长按识别二维码，即刻加入微信群。教授，专业大咖课程免费听！</view>
+      <view class='name-box'>
+        <input placeholder='姓名'></input>
+      </view>
+      <view class='name-box'>
+        <input placeholder='手机号码'></input>
+      </view>
+      <view class='name-box'>
+        <input placeholder='报名意向'></input>
+      </view>
+      <view class='submit'>提交</view>
+    </view>
   </view>
-  
 </view>

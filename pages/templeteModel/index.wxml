@@ -1,0 +1,12 @@
+<view class='bg-black'>
+  <view class='alert-view'>
+    <view class='text-area-box'>
+      <textarea placeholder='请输入字数' class='text-area-style' maxlength='{{chartNumber}}'></textarea>
+      <text class='text-area-number'>90/{{chartNumber}}</text>
+    </view>
+    <view class='btn-box'>
+      <view class='cancle-btn'>取消</view>
+      <view class='submit-btn'>确定</view>
+    </view>
+  </view>
+</view>
