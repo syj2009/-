@@ -17,6 +17,8 @@ page{
   margin: auto;
   text-align: center;
   padding:0 30rpx;
+  /*加阴影 水平-垂直-模糊值-外延值-颜色 */
+  box-shadow: 0 0 40rpx 2rpx #999; 
   background-color: #fff;
 }
 .head{

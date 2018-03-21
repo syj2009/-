@@ -1,8 +1,9 @@
 <view class='contain'>
-  <view class='information-content'>
+  <form bindsubmit='formSubmit'>
+    <view class='information-content'>
     <view class='view-head'>
       <text class='text'>头像</text>
-      <image class='information-image' src='../../image/mine/head.jpg'></image>
+      <image class='information-image' src='../../image/mine/head.jpg' bindtap='changeImage'></image>
     </view>
     <view class='view-name'>
       <text class='text'>姓名*</text>
@@ -22,8 +23,9 @@
     </view>
     <view class='view-QR-code'>
       <text class='text'>微信名片二维码</text>
-      <image class='code' src='../../image/mine/QRCode.png'></image>
+      <image class='code' src='../../image/mine/QRCode.png' bindtap='changeImage'></image>
     </view>
   </view>
-  <view class='button'>提交</view>
+  <button class='button' form-type="submit">提交</button>
+  </form>
 </view>

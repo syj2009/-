@@ -1,12 +1,12 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/statistical-data/index",
-    "pages/mine/index",
-    "pages/visitor/index",
     "pages/business-card/index",
-    "pages/received-card/index",
     "pages/personal-information/index",
+    "pages/mine/index",
+    "pages/index/index",
+    "pages/visitor/index",
+    "pages/received-card/index",
     "pages/browse-failure/index",
     "pages/model-website-edite/index",
     "pages/model-website/index",

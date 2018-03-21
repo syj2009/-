@@ -8,7 +8,6 @@ P('index', {
     });
   },
   data: {
-
   },
 
   onLaunch: function () {
@@ -24,6 +23,13 @@ P('index', {
     wx.showShareMenu({
       withShareTicket: true
     })
+    this.getsignUplList();
+  },
+  /**
+   * 获取报名学员列表
+   * **/
+  getsignUplList: function () {
+    
   },
 
   /**
