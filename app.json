@@ -1,8 +1,11 @@
 {
   "pages":[
+    "pages/statistical-data/index",
+    "pages/mine/index",
+    "pages/visitor/index",
+    "pages/business-card/index",
     "pages/index/index",
     "pages/received-card/index",
-    "pages/business-card/index",
     "pages/personal-information/index",
     "pages/browse-failure/index",
     "pages/model-website-edite/index",

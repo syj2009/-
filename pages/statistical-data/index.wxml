@@ -1,0 +1,38 @@
+<view class='contain'>
+  <view class='back-red'></view>
+  <view class='sitting'></view>
+  <view class='view-information'>
+    <view class='frequency'>
+      <text class='prompt'>浏览次数</text>
+      <view class='frequency-number'>129</view>
+    </view>
+    <view class='visit' bindtap='toVisitNumber'>
+      <text class='prompt'>访问人数</text>
+      <view class='visit-number'>129<image class='jinru' src='../../image/mine/icon_jinru.png'></image></view>
+    </view>
+  </view>
+  <view class='sign-up-title'>报名学员(<text class='sign-up-number'>3</text>人）</view>
+  <view class='sign-up-list'>
+    <view class='sign-up'>
+      <text class='prompt'>大橙子</text>
+      <view class='view-static'>
+        <text class='static'>未处理</text>
+        <image class='view-jinru' src='../../image/mine/icon_jinru.png'></image>
+      </view> 
+    </view>
+    <view class='sign-up'>
+      <text class='prompt'>大橘子</text>
+      <view class='view-static'>
+        <text class='static'>初访</text>
+        <image class='view-jinru' src='../../image/mine/icon_jinru.png'></image>
+      </view> 
+    </view>
+    <view class='sign-up noBorderBottom'>
+      <text class='prompt'>大柚子</text>
+      <view class='view-static'>
+        <text class='static'>暂时搁置</text>
+        <image class='view-jinru' src='../../image/mine/icon_jinru.png'></image>
+      </view> 
+    </view>
+  </view>
+</view>

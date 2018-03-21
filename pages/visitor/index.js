@@ -1,4 +1,4 @@
-/************我的-收到的名片页面****************/
+/************招生-访客人数页面****************/
 var P = require('../../lib/wxpage')
 P('index', {
 
@@ -14,7 +14,7 @@ P('index', {
    * **/
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: ''
+      title: '访客人数'
     })
     wx.showShareMenu({
       withShareTicket: true

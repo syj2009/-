@@ -10,4 +10,5 @@
     <image class='QRCode' src='../../image/mine/QRCode.png'></image>
   </view>
   <text class='prompt'>长按二维码可加老师好友</text>
+  <view class='share' type="default" open-type="share"></view>
 </view>

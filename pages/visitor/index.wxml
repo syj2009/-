@@ -1,0 +1,16 @@
+<view class='contain'>
+  <view class='visitor-list'>
+    <view class='visitor'>
+      <text class='prompt'>大橙子</text>
+      <text class='time'>2017-07-03 12:33:54</text>
+    </view>
+    <view class='visitor'>
+      <text class='prompt'>大橘子</text>
+      <text class='time'>2017-07-03 09:12:23</text>
+    </view>
+    <view class='visitor noBorderBottom'>
+      <text class='prompt'>大柚子</text>
+      <text class='time'>2017-07-03 08:33:23</text>
+    </view>
+  </view>
+</view>

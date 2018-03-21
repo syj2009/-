@@ -5,9 +5,12 @@ page{
  .contain{
   width: 100%;
   height: 100%;
-  padding-top:65rpx;  
+   /* padding-top:65rpx;    */
   text-align: center;
 } 
+.sitting{
+  height: 60rpx;
+}
 .content{
   width: 76%;
   height: 90%;

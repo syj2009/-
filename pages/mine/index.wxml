@@ -14,8 +14,8 @@
     </view>
   </view>
   <view class='content'>
-    <view class='visiting-card'>
-      <image class='card-img' src='../../image/mine/icon_mingpian.png' bindtap='toBusinessCard'></image>
+    <view class='visiting-card' bindtap='toBusinessCard'>
+      <image class='card-img' src='../../image/mine/icon_mingpian.png'></image>
       <text>我的名片</text>
       <image class='jinru' src='../../image/mine/icon_jinru.png'></image>
     </view>

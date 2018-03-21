@@ -1,0 +1,27 @@
+page{
+  background-color: #eaeaea;
+}
+.visitor-list{
+  height: 100%;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.visitor{
+  width: 690rpx;
+  height: 88rpx;
+  margin: auto;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #eaeaea;
+}
+.noBorderBottom{
+  border-bottom: 0;
+}
+.prompt{
+  font-size: 34rpx;
+  color: #333;
+}
+.time{
+  float: right;
+  font-size: 34rpx;
+  color: #999;
+}
