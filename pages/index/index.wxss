@@ -174,11 +174,3 @@ swiper {
   margin-top: 0rpx;
 }
 
-.noDataView {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  font-size: 30rpx;
-  padding-top: 50rpx;
-  background-color: #fff;
-}

@@ -1,22 +1,27 @@
 <view class='contain'>
   <view class='nav-list'>
-    <view class='{{navId == 1?"nav-item-click" : "nav-item" }}' bindtap='clickNavItem' data-id='1'>
+    <view class='{{navId == 0?"nav-item-click" : "nav-item" }}' bindtap='clickNavItem' data-id='0'>
       <text>全部</text>
     </view>
-    <view class='{{navId == 2?"nav-item-click" : "nav-item" }}' bindtap='clickNavItem' data-id='2'>
+    <view class='{{navId == 1?"nav-item-click" : "nav-item" }}' bindtap='clickNavItem' data-id='1'>
       <text>微官网</text>
     </view>
-    <view class='{{navId == 3?"nav-item-click" : "nav-item" }}' bindtap='clickNavItem' data-id='3'>
+    <view class='{{navId == 2?"nav-item-click" : "nav-item" }}' bindtap='clickNavItem' data-id='2'>
       <text>微班级</text>
     </view>
   </view>
   <view class='class-list'>
-    <view class='class-item' wx:for-index="idx"  wx:for="{{dataArray}}" wx:for-item="item">
-      <view class='img-box'>
-        <image src='../../image/model/banner.jpg' class='class-img'></image>
-        <image wx:if="{{item.isVip}}" src='../../image/model/VIP.png' class='vip-img' mode='aspectFit'></image>
+    <view wx:if="{{dataArray.length>0}}">
+      <view class='class-item' wx:for-index="idx"  wx:for="{{dataArray}}" wx:for-item="item" wx:key="uniques">
+        <view class='img-box' bindtap='goModelDetail' data-typeid="{{item.Template_Type_Id?item.Template_Type_Id:'1'}}">
+          <image src='{{item.Url?item.Url:"../../image/browse_failure/browse_failure.png"}}' class='class-img' binderror="errorFunction" data-id='{{idx}}'></image>
+          <image wx:if="{{item.Vip}}" src='../../image/model/VIP.png' class='vip-img' mode='aspectFit'></image>
+        </view>
+        <view class='class-name'>{{item.Name}}</view>
       </view>
-      <view class='class-name'>{{item.name}}{{idx}}</view>
+    </view>
+    <view wx:else> 
+      <view class='noDataView'>暂时没有相关模板</view>
     </view>
   </view>
 </view>
