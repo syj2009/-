@@ -59,7 +59,14 @@ P('index', {
     var self = this;
     var index = e.currentTarget.id;
     var tempBool = self.data.dataArray[index].isSelect
-    self.data.dataArray[index].isSelect = !tempBool;
+    for (var i = 0; i < this.data.dataArray.length; i++) {
+      if(index == i){
+        self.data.dataArray[i].isSelect = !tempBool;
+      } else {
+        self.data.dataArray[i].isSelect = false;
+      }
+    }
+    //更新数据
     self.setData(
       {
         dataArray: self.data.dataArray
@@ -68,22 +75,22 @@ P('index', {
 
   //提交举报原因
   submitclick:function () {
-    var submitStr = "";
+    var submitId = "";
     for (var i = 0; i < this.data.dataArray.length; i++){
       if (this.data.dataArray[i].isSelect == true) {
-        if (i == this.data.dataArray.length - 1) {
-          submitStr += this.data.dataArray[i].id
-        } else {
-          submitStr += this.data.dataArray[i].id + ","
-        }
+        submitId = this.data.dataArray[i].id;
+        break;
       }
     }
-    console.log("举报原因id ....", submitStr)
-    if (submitStr == ""){
+    //console.log("举报原因id ....", submitId)
+    if (submitId == ""){
       wx.showToast({
         title: '请选择举报原因',
       })
     }else {
+      wx.showToast({
+        title: '举报成功',
+      })
       this.setData({
         showModal:false
       });
