@@ -6,7 +6,6 @@ page{
 }
 .contain{
   width: 710rpx;
-  height: 290rpx;
   margin: auto;
   text-align: center;
 }
@@ -53,6 +52,7 @@ page{
   float: right;
   text-align: right;
 }
+
 /*加号浮动  */
 .add-model {
   position: fixed;
