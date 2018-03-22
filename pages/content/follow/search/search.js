@@ -93,7 +93,15 @@ P('index', {
     }
     //获取输入内容
     var submitStr = self.data.searchInput;
-    
+    // wx.navigateTo({
+    //   url: 'pages/follow/index',
+    // })
+    // wx.redirectTo({
+    //   url: '/pages/follow/index',
+    // })
+    wx.navigateTo({
+      url: '/pages/follow/index',
+    })
   },
 
   //重置事件

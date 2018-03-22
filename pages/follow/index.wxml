@@ -1,6 +1,6 @@
 <view class='contain'>
   <view class="follow-search">
-    <input bindtap='inputclick' class="search-input" type='type' placeholder="请输入客户的名称或电话" focus />
+    <input bindtap='inputclick' class="search-input" value="{{query}}" type='type' placeholder="请输入客户的名称或电话" focus />
   </view>
   <scroll-view class='follow-href' style="height: 850rpx" scroll-y='true' bindscrolltolower="loadMore">
     <view bindtap='detailclick' class='follow-href-margin' id="{{index}}" wx:for="{{dataArray}}" wx:for-item="item"   wx:key="follow-index">

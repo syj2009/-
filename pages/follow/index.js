@@ -21,6 +21,7 @@ P('index', {
 
       this.getData();
   },
+  
 
   //上拉加载更多
   loadMore: function () {
@@ -46,7 +47,7 @@ P('index', {
     var pageNum = this.data.pageNum;
     var query = this.data.query;
     var state = this.data.state;
-
+    console.log("line 49====", query)
     var self = this;
     if (self.data.hasNextPage) {
       wx.request({
