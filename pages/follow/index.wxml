@@ -13,6 +13,6 @@
         <text>{{item.FollowUpDate}}</text>
       </view>
     </view>
-  </scroll-view>>
+  </scroll-view>
   <image src='../../image/index/add-icon.png' class='add-model' bindtap='addclick'></image>
 </view>
