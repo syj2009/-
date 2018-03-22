@@ -6,6 +6,7 @@ P('index', {
     searchInput: "", //搜索内容
     dataArray: [] //显示的数据源
   },
+
   /**
      * 初次加载页面配置
      * **/
@@ -73,10 +74,6 @@ P('index', {
     this.setData({
       searchInput: e.detail.value
     })
-    
-    wx.showToast({
-      title: e.detail.value,
-    })
   },
 
   //提交事件
@@ -93,15 +90,19 @@ P('index', {
     }
     //获取输入内容
     var submitStr = self.data.searchInput;
-    // wx.navigateTo({
-    //   url: 'pages/follow/index',
-    // })
-    // wx.redirectTo({
-    //   url: '/pages/follow/index',
-    // })
-    wx.navigateTo({
-      url: '/pages/follow/index',
+
+    //返回页面改值
+    var pages = getCurrentPages();
+    var currPage = pages[pages.length - 1];   //当前页面
+    var prevPage = pages[pages.length - 2];  //上一个页面
+
+    console.log("====", submitStr, submitId)
+    // 直接调用上一个页面的setData()方法，把数据存到上一个页面中去
+    prevPage.setData({
+      query: submitStr,
+      state: submitId
     })
+    wx.navigateBack();
   },
 
   //重置事件

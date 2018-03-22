@@ -4,22 +4,22 @@ P('index', {
   data: {
     pageNum: 1,
     query: "",
-    State: "",
+    state: "",
     hasNextPage: true,
     dataArray: [] //显示的数据源
   },
 
-  onLaunch: function () {
+  onShow: function () {
+    this.getData();
   },
+  
   /**
      * 初次加载页面配置
      * **/
   onLoad: function () {
     wx.setNavigationBarTitle({
       title: '跟进'
-    }),
-
-      this.getData();
+    })
   },
   
 
@@ -47,7 +47,6 @@ P('index', {
     var pageNum = this.data.pageNum;
     var query = this.data.query;
     var state = this.data.state;
-    console.log("line 49====", query)
     var self = this;
     if (self.data.hasNextPage) {
       wx.request({
