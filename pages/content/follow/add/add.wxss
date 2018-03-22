@@ -53,6 +53,9 @@ page{
   font-size: 24rpx;
   padding: 20rpx;
 }
+.write-li:last-child{
+  border-bottom: none;
+}
 /* 提交按钮 */
 .write-btn-content{
   width: 90%;

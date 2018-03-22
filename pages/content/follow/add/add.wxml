@@ -25,8 +25,8 @@
       <text class='write-li-right li-right-gray' type="default"  bindtap='followUpState'>请选择 ></text>
     </view>
     <view class='write-li'>
-      <text class=''>跟进内容</text>
-      <textarea placeholder='请填写跟进内容'></textarea>
+      <text>跟进内容</text>
+      <textarea placeholder='请填写跟进内容' auto-focus="true"></textarea>
     </view>
     <view class='write-li'>
       <text class='write-li-left'>下次跟进时间</text>

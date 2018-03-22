@@ -8,9 +8,7 @@
       </view>
     </view>
     <view class='details-top-right'>
-      <navigator url="">
-        <image src='../../../../image/follow/icon_dianhua.png'></image>
-      </navigator>
+      <image src='../../../../image/follow/icon_dianhua.png'></image>
     </view>
   </view>
   <view class='details-tabs'>
@@ -19,7 +17,7 @@
         <view class="{{selected1?'red':'default'}}" bindtap="selected1">客户资料</view>
       </view>
       <view class="{{selected?'show':'hidden'}}">
-        <view class='follow-details-li'>
+         <view class='follow-details-li'>
               <view class='details-title'>
                 <text class="title-date">今天 16:21</text>
                 <text class='title-sign'>报名</text>
@@ -62,16 +60,16 @@
               </view>
               <view>
                 <view class='details-body'>
-                  <text class='details-body-left'>跟进方式：</text>
-                  <text class='details-body-right'>电话</text>
+                    <text class='details-body-left'>跟进方式：</text>
+                    <text class='details-body-right'>电话</text>
                 </view>
                 <view class='details-body'>
-                  <text class='details-body-left'>跟进内容：</text>
-                  <text class='details-body-right'>客户同意报名，并考虑让身边的朋友也参加培训，一起报名学习，可跟进。</text>
+                    <text class='details-body-left'>跟进内容：</text>
+                    <text class='details-body-right'>客户同意报名，并考虑让身边的朋友也参加培训，一起报名学习，可跟进。</text>
                 </view>
               </view>
-        </view>
-        <image src='../../../../image/index/add-icon.png' class='add-model' bindtap='goModelList'></image>
+        </view>   
+        <image src='../../../../image/index/add-icon.png' class='add-model' bindtap='goModelList'></image> 
       </view>
       <view class="{{selected1?'show':'hidden'}}">
         <view class='follow-write'>
@@ -100,13 +98,13 @@
             <text class='write-li-right li-right-gray' type="default"  bindtap='customerSource'>请选择 ></text>
           </view>
           <view class='write-li'>
-            <text class=''>备注</text>
-            <textarea placeholder='请填写备注内容'></textarea>
+            <text>备注</text>
+            <textarea  auto-focus="true"></textarea>
           </view>
         </view>
         <view class='write-btn-content'>
           <button class='write-btn'>提交</button>
-        </view>
+        </view> 
       </view>
   </view>
 </view>

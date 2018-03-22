@@ -12,13 +12,12 @@ page{
 /* 跟进详情 */
 .follow-details-top{
   margin-top: 20rpx;
-  width: 100%;
   background-color: #fff;
   padding: 40rpx 60rpx;
   overflow: hidden;
 }
 .details-top-left{
-  width: 67%;
+  width: 72%;
   color: #333;
   float: left;
 }
@@ -27,7 +26,6 @@ page{
   width: 140rpx;
   height:140rpx;
   border-radius: 70rpx;  
-  border: 1rpx solid #333;
 }
 .details-images-right{
   float: left;
@@ -44,7 +42,7 @@ page{
   padding-top: 10rpx;
 }
 .details-top-right{
-  width: 32%;
+  width: 25%;
   border-left: #eaeaea 1px solid;
   text-align: left;
   float: right;
