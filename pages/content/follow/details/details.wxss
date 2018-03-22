@@ -26,7 +26,8 @@ page{
   float: left;
   width: 140rpx;
   height:140rpx;
-  border-radius: 70rpx;
+  border-radius: 70rpx;  
+  border: 1rpx solid #333;
 }
 .details-images-right{
   float: left;
@@ -74,6 +75,7 @@ page{
   border-right: 1px solid #eaeaea;
   color: #333;
   font-size: 36rpx;
+  
 }
 .red{
   line-height: 100rpx;
@@ -93,7 +95,7 @@ page{
 .follow-write{
   background-color: #fff;
   color: #333;
-  margin: 15rpx 0;
+  margin: 20rpx 0;
   font-size: 34rpx;
 }
 .write-li{
