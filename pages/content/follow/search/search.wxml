@@ -1,12 +1,6 @@
 <view class='contain'>
   <view class="follow-search">
-      <view class="follow-search-left">
-         <input class="search-input" type='type' placeholder="请输入客户的名称或电话" focus />
-      </view>
-      <view class="follow-search-right">
-        <text class="text-red">筛选</text>
-        <image src="../../../../image/follow/icon_shaixuan_xuanzhong.png" class="icon_search"></image>
-      </view>
+     <input class="search-input" type='type' placeholder="请输入客户的名称或电话" focus />
   </view>
   <view class="follow-state">
     <text class="state-title">状态</text>
@@ -17,7 +11,6 @@
       <text class='search-gray'>意向</text>
       <text class='search-gray'>报名</text>
       <text class='search-gray'>拒绝报名</text>
-      <text class='search-gray'>暂时搁置</text>
     </view>
   </view>
   <view class='state-btn'>

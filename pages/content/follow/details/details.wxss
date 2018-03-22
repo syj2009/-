@@ -1,0 +1,149 @@
+page{
+  margin: 0 auto;
+  height: 100%;
+  background-color: #eee;
+}
+.contain{
+  width: 100%;
+  height: 290rpx;
+  margin: auto;
+  text-align: center;
+}
+/* 跟进详情 */
+.follow-details-top{
+  margin-top: 20rpx;
+  width: 100%;
+  background-color: #fff;
+  padding: 30rpx 60rpx;
+  overflow: hidden;
+}
+.details-top-left{
+  width: 67%;
+  color: #333;
+  float: left;
+}
+.details-top-image{
+  float: left;
+  width: 140rpx;
+  height:140rpx;
+  border-radius: 60rpx;  
+}
+.details-images-right{
+  float: left;
+  text-align: left;
+  padding: 10rpx 0 0 26rpx;
+}
+.details-name{
+  font-size: 36rpx;
+}
+.details-phone{
+  font-size: 26rpx;
+  color: #999;
+  display: block;
+  padding-top: 10rpx;
+}
+.details-top-right{
+  width: 32%;
+  border-left: #eaeaea 1px solid;
+  text-align: left;
+  float: right;
+  margin-top: 20rpx;
+}
+.details-top-right image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 50rpx;
+  margin-top: 10rpx;
+}
+/* 选项卡 */
+.details-tabs{
+  width: 100%;
+  border-top: 1px solid #eaeaea;
+}
+.nav{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  }
+.default{
+  line-height: 100rpx;
+  text-align: center;
+  flex: 1;
+  border-right: 1px solid #eaeaea;
+  color: #333;
+  font-size: 36rpx;
+}
+.red{
+  line-height: 100rpx;
+  text-align: center;
+  color: #de644f;
+  flex: 1;
+  border-right: 1px solid #eaeaea;
+  font-size: 36rpx;
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+/*客户资料*/
+.follow-write{
+  background-color: #fff;
+  color: #333;
+  margin: 15rpx 0;
+  font-size: 34rpx;
+}
+.write-li{
+  border-bottom: 1px solid #eaeaea;
+  padding: 25rpx 0;
+  margin: 0 auto;
+  clear: both;
+  width: 90%;
+  overflow: hidden;
+  text-align: left;
+}
+.write-li-left,
+.write-li-right{
+  display: inline-block;
+}
+.write-li-left{
+  text-align: left;  
+  width: 40%;
+  float: left;
+}
+.write-li-right{
+  text-align: right;
+  color: #999;
+  width: 59%;
+  float: right;
+}
+.write-li input{
+  width: 300rpx;
+}
+.li-right-gray{
+  color: #666;
+}
+.write-li textarea{
+  width: 100%;
+  height: 150rpx;
+  background-color: #f7f7f7;
+  color: #999;
+  font-size: 24rpx;
+  padding: 20rpx;
+}
+/* 提交按钮 */
+.write-btn-content{
+  width: 90%;
+  margin: 0 auto;
+}
+.write-btn{
+  background-color: #de644f;
+  color: #fff;
+  /* position: absolute;
+  bottom: 20rpx; */
+  width: 90%;
+  margin: 30rpx 0;
+}

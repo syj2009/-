@@ -9,15 +9,11 @@ page{
   margin: auto;
   text-align: center;
 }
-/* 跟进列表 */
+/* 跟进筛选 */
 .follow-search{
-  width: 710rpx;
   margin: 30rpx auto 20rpx;
   overflow: hidden;
-}
-.follow-search-left{
-  width: 580rpx;
-  float: left;
+  width: 94%;
   font-size: 28rpx;
 }
 .search-input{

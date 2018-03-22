@@ -1,0 +1,68 @@
+page{
+  margin: 0 auto;
+  height: 100%;
+  background-color: #eee;
+}
+.contain{
+  width: 100%;
+  height: 290rpx;
+  margin: auto;
+  text-align: center;
+}
+.follow-write{
+  background-color: #fff;
+  color: #333;
+  margin: 15rpx 0;
+  font-size: 34rpx;
+}
+.write-li{
+  border-bottom: 1px solid #eaeaea;
+  padding: 25rpx 0;
+  margin: 0 auto;
+  clear: both;
+  width: 90%;
+  overflow: hidden;
+  text-align: left;
+}
+.write-li-left,
+.write-li-right{
+  display: inline-block;
+}
+.write-li-left{
+  text-align: left;  
+  width: 40%;
+  float: left;
+}
+.write-li-right{
+  text-align: right;
+  color: #999;
+  width: 59%;
+  float: right;
+}
+.write-li input{
+  width: 300rpx;
+}
+.li-right-gray{
+  color: #666;
+}
+.write-li textarea{
+  width: 100%;
+  height: 150rpx;
+  background-color: #f7f7f7;
+  color: #999;
+  font-size: 24rpx;
+  padding: 20rpx;
+}
+/* 提交按钮 */
+.write-btn-content{
+  width: 90%;
+  margin: 0 auto;
+}
+.write-btn{
+  background-color: #de644f;
+  color: #fff;
+  /* position: absolute;
+  bottom: 20rpx; */
+  width: 90%;
+  margin-top: 30rpx 0;
+}

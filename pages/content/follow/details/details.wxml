@@ -1,1 +1,56 @@
-<view>跟进详情页</view>
+<view class='contain'>
+  <view class="follow-details-top">
+    <view class='details-top-left'>
+      <image class='details-top-image' src='../../../../image/follow/name_image.jpg'></image>
+      <view class='details-images-right'>
+        <text class='details-name'>郭大侠</text>
+        <text class='details-phone'>13012345678</text>
+      </view>
+    </view>
+    <view class='details-top-right'>
+      <image src='../../../../image/follow/icon_dianhua.png'></image>
+    </view>
+  </view>
+  <view class='details-tabs'>
+      <view class="nav bc_white">
+        <view class="{{selected?'red':'default'}}" bindtap="selected">跟进记录</view>
+        <view class="{{selected1?'red':'default'}}" bindtap="selected1">客户资料</view>
+      </view>
+      <view class="{{selected?'show':'hidden'}}">for system</view>
+      <view class="{{selected1?'show':'hidden'}}">
+        <view class='follow-write'>
+          <view class='write-li'>
+            <text class='write-li-left'>客户名称*</text>
+            <text class='write-li-right'>我是新客户</text>
+          </view>
+          <view class='write-li'>
+            <text class='write-li-left'>真实姓名</text>
+            <input class='write-li-right' auto-focus placeholder='请输入真实姓名'/>
+          </view>
+          <view class='write-li'>
+            <text class='write-li-left'>报考行业*</text>
+            <text class='write-li-right li-right-gray' type="default"  bindtap='examinationIndustry'>请选择 ></text>
+          </view>
+          <view class='write-li'>
+            <text class='write-li-left'>报考分类*</text>
+            <text class='write-li-right li-right-gray' type="default"  bindtap='examinationClassify'>请选择 ></text>
+          </view>
+          <view class='write-li'>
+            <text class='write-li-left'>联系电话*</text>
+            <input class='write-li-right' auto-focus placeholder='请输入联系电话'/>
+          </view>
+          <view class='write-li'>
+            <text class='write-li-left'>客户来源*</text>
+            <text class='write-li-right li-right-gray' type="default"  bindtap='customerSource'>请选择 ></text>
+          </view>
+          <view class='write-li'>
+            <text class=''>备注</text>
+            <textarea placeholder='请填写备注内容'></textarea>
+          </view>
+        </view>
+        <view class='write-btn-content'>
+          <button class='write-btn'>提交</button>
+        </view>
+      </view>
+  </view>
+</view>

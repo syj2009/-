@@ -1,1 +1,31 @@
-<view>写跟进页</view>
+<view class='contain'>
+  <view class='follow-write'>
+    <view class='write-li'>
+      <text class='write-li-left'>客户名称*</text>
+      <text class='write-li-right'>写跟进</text>
+    </view>
+    <view class='write-li'>
+      <text class='write-li-left'>跟进方式*</text>
+      <text class='write-li-right li-right-gray' type="default"  bindtap='followUpMethod'>请选择 ></text>
+    </view>
+    <view class='write-li'>
+      <text class='write-li-left'>跟进时间*</text>
+      <text class='write-li-right'>2017-06-28 15:32</text>
+    </view>
+    <view class='write-li'>
+      <text class='write-li-left'>跟进状态*</text>
+      <text class='write-li-right li-right-gray' type="default"  bindtap='followUpState'>请选择 ></text>
+    </view>
+    <view class='write-li'>
+      <text class=''>跟进内容</text>
+      <textarea placeholder='请填写跟进内容' auto-focus="true"></textarea>
+    </view>
+    <view class='write-li'>
+      <text class='write-li-left'>下次跟进时间</text>
+      <text class='write-li-right'>2017-06-28 15:32</text>
+    </view>
+  </view>
+  <view class='write-btn-content'>
+    <button class='write-btn'>提交</button>
+  </view>
+</view>

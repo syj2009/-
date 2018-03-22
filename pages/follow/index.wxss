@@ -14,10 +14,7 @@ page{
 .follow-search{
   margin: 30rpx 0 20rpx;
   overflow: hidden;
-}
-.follow-search-left{
-  width: 580rpx;
-  float: left;
+  width: 100%;
   font-size: 28rpx;
 }
 .search-input{
@@ -28,17 +25,6 @@ page{
   color: #999;
   text-align: left;
   padding: 10rpx 20rpx;
-}
-.follow-search-right{
-  float: left;
-  font-size: 32rpx;
-  margin-left: 20rpx;
-  line-height: 2.5;
-}
-.icon_search{
-  width: 30rpx;
-  height: 30rpx;
-  margin: 0 0 0 10rpx;
 }
 .follow-href{
   color: #333;

@@ -3,6 +3,7 @@
     "pages/statistical-data/index",
     "pages/business-card/index",
     "pages/personal-information/index",
+    "pages/browse-failure/index",
     "pages/mine/index",
     "pages/index/index",
     "pages/visitor/index",
@@ -56,7 +57,9 @@
       "root": "pages/content/",
       "pages": [
         "follow/details/details",
-        "follow/search/search"
+        "follow/search/search",
+        "follow/write/write",
+        "follow/add/add"
       ]
     }
   ],
