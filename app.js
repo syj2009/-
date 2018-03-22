@@ -74,7 +74,7 @@ require('./lib/wxpage').A({
                     method: 'POST',
                     dataType: 'json',
                     success: function (res) {
-                      wx.setStorageSync("userId", res.data.Info.Id);
+                        wx.setStorageSync("userId", res.data.Info.Id);
                     },
                   });
                 }
@@ -89,10 +89,11 @@ require('./lib/wxpage').A({
       success: function (res) {
         var userInfo = res.userInfo;
         wx.setStorageSync("userInfo", res.userInfo);
+        var openId = wx.getStorageSync("Openid")
         wx.request({
           url: that.data.host + '/api/Account/SaveUserInfo',
           data: {
-            "Openid": res.data.Info.Openid,
+            "Openid": openId,
             "HeaderImge": userInfo.avatarUrl,
             "Name": userInfo.nickName,
             "Phone": "",
@@ -103,10 +104,9 @@ require('./lib/wxpage').A({
           method: 'POST',
           dataType: 'json',
           success: function (res) {
-            console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2" + JSON.stringify(res));
+            // console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2" + JSON.stringify(res));
           },
         });
-
       }
     })
   }

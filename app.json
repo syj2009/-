@@ -1,17 +1,17 @@
 {
   "pages":[
+    "pages/personal-information/index",
+    "pages/model-website-edite/index",
+    "pages/mine/index",
+    "pages/model-class-edite/index",
     "pages/follow/index",
     "pages/statistical-data/index",
     "pages/business-card/index",
-    "pages/personal-information/index",
     "pages/browse-failure/index",
-    "pages/mine/index",
     "pages/index/index",
     "pages/visitor/index",
     "pages/received-card/index",
-    "pages/model-website-edite/index",
     "pages/model-website/index",
-    "pages/model-class-edite/index",
     "pages/model-class/index",
     "pages/model-list/index"
   ],
@@ -44,7 +44,7 @@
         "text": "跟进"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/mine/index",
         "iconPath": "image/index/people-gray.png",
         "selectedIconPath": "image/index/people-red.png",
         "text": "我的"

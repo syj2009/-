@@ -4,7 +4,7 @@ P('index', {
   toVisitNumber: function (e) {
     var that = this
     wx.navigateTo({
-      url: "/pages/recruit-student/index"
+      url: "/pages/visitor/index"
     });
   },
   data: {

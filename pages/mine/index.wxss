@@ -24,6 +24,7 @@ page{
 
 /* 用户信息 */
 .view-information{
+  height: 200rpx;
   border-radius: 8rpx;
   background-color: #fff;
 }
@@ -44,9 +45,10 @@ page{
   padding-top: 55rpx;
 }
 .name{
+  height: 40rpx;
   font-size: 36rpx;
   color: #333;
-  margin: 12rpx 0;
+  margin: 20rpx 0 24rpx 0;
 }
 .school-name{
   font-size: 26rpx;

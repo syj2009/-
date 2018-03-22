@@ -1,31 +1,31 @@
 <view class='contain'>
   <form bindsubmit='formSubmit'>
     <view class='information-content'>
-    <view class='view-head'>
-      <text class='text'>头像</text>
-      <image class='information-image' src='../../image/mine/head.jpg' bindtap='changeImage'></image>
+      <view class='view-head' >
+        <text class='text'>头像</text>
+        <image class='information-image' src="{{HeaderImge}}" bindtap='changeImage' data-id='1'></image>
+      </view>
+      <view class='view-name'>
+        <text class='text'>姓名*</text>
+        <textarea type='text' class='name' data-value='1' value='{{Name}}' maxlength='6'></textarea>
+      </view>
+      <view class='view-mobile'>
+        <text class='text'>手机号码</text>
+        <textarea class='mobile' type='text' value='{{Phone}}'></textarea>
+      </view>
+      <view class='view-institutionName'>
+        <text class='text'>机构名称</text>
+        <textarea class='institutionName' type='text' maxlength='20' value='{{TrainingName}}'></textarea>
+      </view>
+      <view class='view-institutionAddress'>
+        <text class='text'>机构地址</text>
+        <textarea class='institutionAddress' type='text' maxlength='100' value='{{TrainingAdd}}'></textarea>
+      </view>
+      <view class='view-QR-code'>
+        <text class='text'>微信名片二维码</text>
+        <image class='code' src="{{QrCode}}" bindtap='changeImage' data-id='2'></image>
+      </view>
+      <button class='button' form-type="submit">提交</button>
     </view>
-    <view class='view-name'>
-      <text class='text'>姓名*</text>
-      <input type='text' class='name' value='程梓欣' maxlength='6'></input>
-    </view>
-    <view class='view-mobile'>
-      <text class='text'>手机号码</text>
-      <input class='mobile' type='text' value='13367890431'></input>
-    </view>
-    <view class='view-institutionName'>
-      <text class='text'>机构名称</text>
-      <input class='institutionName' maxlength='20' value='青岛托普培训学校'></input>
-    </view>
-    <view class='view-institutionAddress'>
-      <text class='text'>机构地址</text>
-      <input class='institutionAddress' maxlength='100' value='青岛市李沧区金水路157-10号'></input>
-    </view>
-    <view class='view-QR-code'>
-      <text class='text'>微信名片二维码</text>
-      <image class='code' src='../../image/mine/QRCode.png' bindtap='changeImage'></image>
-    </view>
-  </view>
-  <button class='button' form-type="submit">提交</button>
   </form>
 </view>

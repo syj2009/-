@@ -29,6 +29,7 @@ page{
 }
 .name,.mobile,.institutionName,.institutionAddress{
   text-align: right;
+  width: 70%;
   float: right; 
   height: 88rpx;
   color: #999;

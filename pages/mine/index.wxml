@@ -1,13 +1,13 @@
 <view class='contain'>
   <view class='back-red'></view>
   <view class='sitting'></view>
-  <view class='view-information'>
-    <view class='view-head'>
-      <image class='head-image' src='../../image/mine/head.jpg'></image>
-    </view>
+  <view class='view-information' wx:if="{isShow}}">
+    <view-item class='view-head'>
+      <image class='head-image' src="{{HeaderImge?HeaderImge:'../../image/mine/head.jpg'}}"></image>
+    </view-item>
     <view class='information'>
-      <view class='name'>程梓欣</view>
-      <view class='school-name'>青岛托普培训学校</view>
+      <view class='name'>{{Name?Name:'程梓欣'}}</view>
+      <view class='school-name'>{{TrainingName?TrainingName:'青岛托普培训学校'}}</view>
     <view class='bianji'>
       <image class='bianji-img' src='../../image/mine/icon_bianji.png'  bindtap='toPersonalInformation'></image>
     </view>
