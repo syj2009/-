@@ -1,50 +1,18 @@
 <view class='contain'>
   <view class="follow-search">
-     <input class="search-input" type='type' placeholder="请输入客户的名称或电话" focus />
+    <input bindtap='inputclick' class="search-input" type='type' placeholder="请输入客户的名称或电话" focus />
   </view>
-  <view class='follow-href'>
-    <navigator url="../../pages/content/follow/search/search" class='follow-href-margin'>
+  <scroll-view class='follow-href' style="height: 850rpx" scroll-y='true' bindscrolltolower="loadMore">
+    <view bindtap='detailclick' class='follow-href-margin' id="{{index}}" wx:for="{{dataArray}}" wx:for-item="item"   wx:key="follow-index">
       <view class="href-left">
-        <view>跳转筛选页</view>
-        <text>13688889999</text>
+        <view>{{item.StuName}}</view>
+        <text>{{item.Phone}}</text>
       </view>
       <view class="href-right">
-        <view>初访</view>
-        <text>2017-05-22 15:32</text>
+        <view>{{item.StateName}}</view>
+        <text>{{item.FollowUpDate}}</text>
       </view>
-    </navigator>
-    <navigator url="../../pages/content/follow/write/write" class='follow-href-margin'>
-      <view class="href-left">
-        <view>跳转写跟进页</view>
-        <text>13688889999</text>
-      </view>
-      <view class="href-right">
-        <view>初访</view>
-        <text>2017-05-22 15:32</text>
-      </view>
-    </navigator>
-    <navigator url="../../pages/content/follow/add/add" class='follow-href-margin'>
-      <view class="href-left">
-        <view>跳转新增跟进页</view>
-        <text>13688889999</text>
-      </view>
-      <view class="href-right">
-        <view>初访</view>
-        <text>2017-05-22 15:32</text>
-      </view>
-    </navigator>
-    <navigator url="../../pages/content/follow/details/details" class='follow-href-margin'>
-      <view class="href-left">
-        <view>跳转详情页</view>
-        <text>13688889999</text>
-      </view>
-      <view class="href-right">
-        <view>初访</view>
-        <text>2017-05-22 15:32</text>
-      </view>
-    </navigator>
-  </view>
-  <navigator url="../../pages/content/follow/add/add">
-    <image src='../../image/index/add-icon.png' class='add-model' bindtap='goModelList'></image>
-  </navigator>
+    </view>
+  </scroll-view>>
+  <image src='../../image/index/add-icon.png' class='add-model' bindtap='addclick'></image>
 </view>

@@ -8,7 +8,9 @@
       </view>
     </view>
     <view class='details-top-right'>
-      <image src='../../../../image/follow/icon_dianhua.png'></image>
+      <navigator url="">
+        <image src='../../../../image/follow/icon_dianhua.png'></image>
+      </navigator>
     </view>
   </view>
   <view class='details-tabs'>
@@ -16,7 +18,61 @@
         <view class="{{selected?'red':'default'}}" bindtap="selected">跟进记录</view>
         <view class="{{selected1?'red':'default'}}" bindtap="selected1">客户资料</view>
       </view>
-      <view class="{{selected?'show':'hidden'}}">for system</view>
+      <view class="{{selected?'show':'hidden'}}">
+        <view class='follow-details-li'>
+              <view class='details-title'>
+                <text class="title-date">今天 16:21</text>
+                <text class='title-sign'>报名</text>
+              </view>
+              <view>
+                <view class='details-body'>
+                  <text class='details-body-left'>跟进方式：</text>
+                  <text class='details-body-right'>电话</text>
+                </view>
+                <view class='details-body'>
+                  <text class='details-body-left'>跟进内容：</text>
+                  <text class='details-body-right'>客户同意报名，并考虑让身边的朋友也参加培训，一起报名学习，可跟进。</text>
+                </view>
+                <view class='details-body'>
+                  <text class='details-body-left'>下次跟进时间：</text>
+                  <text class='details-body-right right-green'>2017-06-30 16:00</text>
+                </view>
+              </view>
+        </view>
+        <view class='follow-details-li'>
+              <view class='details-title'>
+                <text class="title-date">昨天 16:21</text>
+                <text class='title-sign'>报名</text>
+              </view>
+              <view>
+                <view class='details-body'>
+                  <text class='details-body-left'>跟进方式：</text>
+                  <text class='details-body-right'>电话</text>
+                </view>
+                <view class='details-body'>
+                  <text class='details-body-left'>跟进内容：</text>
+                  <text class='details-body-right'>客户同意报名，并考虑让身边的朋友也参加培训，一起报名学习，可跟进。</text>
+                </view>
+              </view>
+        </view>
+        <view class='follow-details-li'>
+              <view class='details-title'>
+                <text class="title-date">2017-06-20 17:05</text>
+                <text class='title-sign'>报名</text>
+              </view>
+              <view>
+                <view class='details-body'>
+                  <text class='details-body-left'>跟进方式：</text>
+                  <text class='details-body-right'>电话</text>
+                </view>
+                <view class='details-body'>
+                  <text class='details-body-left'>跟进内容：</text>
+                  <text class='details-body-right'>客户同意报名，并考虑让身边的朋友也参加培训，一起报名学习，可跟进。</text>
+                </view>
+              </view>
+        </view>
+        <image src='../../../../image/index/add-icon.png' class='add-model' bindtap='goModelList'></image>
+      </view>
       <view class="{{selected1?'show':'hidden'}}">
         <view class='follow-write'>
           <view class='write-li'>

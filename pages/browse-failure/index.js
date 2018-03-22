@@ -52,7 +52,6 @@ P('index', {
     wx.switchTab({
       url: '/pages/index/index',
     })
-
   },
 
   //选择举报原因

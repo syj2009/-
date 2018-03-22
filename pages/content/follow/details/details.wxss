@@ -14,7 +14,7 @@ page{
   margin-top: 20rpx;
   width: 100%;
   background-color: #fff;
-  padding: 30rpx 60rpx;
+  padding: 40rpx 60rpx;
   overflow: hidden;
 }
 .details-top-left{
@@ -26,7 +26,8 @@ page{
   float: left;
   width: 140rpx;
   height:140rpx;
-  border-radius: 60rpx;  
+  border-radius: 70rpx;  
+  border: 1rpx solid #333;
 }
 .details-images-right{
   float: left;
@@ -74,6 +75,7 @@ page{
   border-right: 1px solid #eaeaea;
   color: #333;
   font-size: 36rpx;
+  
 }
 .red{
   line-height: 100rpx;
@@ -93,7 +95,7 @@ page{
 .follow-write{
   background-color: #fff;
   color: #333;
-  margin: 15rpx 0;
+  margin: 20rpx 0;
   font-size: 34rpx;
 }
 .write-li{
@@ -134,16 +136,94 @@ page{
   font-size: 24rpx;
   padding: 20rpx;
 }
+.write-li:last-child{
+  border-bottom: none;
+}
 /* 提交按钮 */
 .write-btn-content{
   width: 90%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .write-btn{
   background-color: #de644f;
   color: #fff;
-  /* position: absolute;
-  bottom: 20rpx; */
-  width: 90%;
   margin: 30rpx 0;
+}
+/* 跟进记录 */
+.follow-details-li{
+  width: 94%;
+  margin: 20rpx auto;
+  overflow: hidden;
+  background-color: #fff;
+  color: #666;
+  font-size: 28rpx;
+  text-align: left;
+  border: 1rpx solid #eaeaea;
+}
+.details-title{
+  border-bottom:1px solid #eaeaea;
+  padding: 20rpx 35rpx;
+  font-size: 32rpx;
+}
+.icon-circle{
+  width: 4rpx;
+  line-height: 1rpx;
+  border-radius: 2rpx;
+  border: 2px solid #de644f;
+  font-size: 0;
+}
+.title-date{
+  text-align: left;
+  position: relative;
+  margin-left: 5rpx;
+  padding-left: 25rpx;
+}
+.title-date:before{
+  content: '';
+  width: 10rpx;
+  height: 10rpx;
+  line-height: 1;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 0;
+  font-size: 0;
+  background-color:#de644f; 
+}
+.title-sign{
+  width: 200rpx;
+  float: right;
+   text-align: right;
+   color: #de644f;
+}
+.details-body{
+  margin: 20rpx 0; 
+  padding: 1rpx 0;
+  font-size: 28rpx;
+  color: #666;
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+}
+.details-body-left{
+  width: 32%;
+  float: left;
+  text-align: right;
+  color: #999;
+}
+.details-body-right{
+  width: 64%;
+  text-align: left;
+  float: left;
+}
+.right-green{
+  color: #3cb149;
+}
+.add-model{
+  position: fixed;
+  width: 80rpx;
+  height: 80rpx;
+  bottom: 20rpx;
+  left: 45%;
 }
