@@ -13,7 +13,7 @@
         <text>{{item.FollowUpDate}}</text>
       </view>
     </view>
-  </scroll-view>>
+  </scroll-view>
   <navigator url="../../pages/content/follow/add/add">
     <image src='../../image/index/add-icon.png' class='add-model' bindtap='goModelList'></image>
   </navigator>
