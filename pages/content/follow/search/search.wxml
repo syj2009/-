@@ -1,20 +1,15 @@
 <view class='contain'>
   <view class="follow-search">
-     <input class="search-input" type='type' placeholder="请输入客户的名称或电话" focus />
+     <input class="search-input"   bindinput="searchInput"  value="{{searchInput}}" type='type' placeholder="请输入客户的名称或电话" maxlength = "20" focus />
   </view>
   <view class="follow-state">
     <text class="state-title">状态</text>
-    <view class="state-content">
-      <text class='search-gray search-red'>未处理</text>
-      <text class='search-gray'>联系方式无效</text>
-      <text class='search-gray'>初访</text>
-      <text class='search-gray'>意向</text>
-      <text class='search-gray'>报名</text>
-      <text class='search-gray'>拒绝报名</text>
+    <view class="state-content" >
+      <text class="{{item.isSelect?'search-gray search-red':'search-gray'}}"  wx:for="{{dataArray}}" wx:for-item="item"   wx:key="search-index" id="{{index}}" bindtap='itemclick'>{{item.StateName}}</text>
     </view>
   </view>
   <view class='state-btn'>
-    <button class="state-btn-reset">重置</button>
-    <button class="state-btn-sure">确定</button>
+    <button class="state-btn-reset"  bindtap='clearClick'>重置</button>
+    <button class="state-btn-sure" bindtap='submitClick'>确定</button>
   </view>
 </view>

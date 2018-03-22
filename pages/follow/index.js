@@ -87,7 +87,7 @@ P('index', {
 
   //跳转到筛选页面
   inputclick: function () {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/content/follow/search/search',
     })
   },
@@ -100,7 +100,13 @@ P('index', {
       url: '/pages/content/follow/details/details' + "?followId=" + tempFollowId,
     })
   },
-  
+
+  //跳转到写跟进页面
+  addclick: function () {
+    wx.navigateTo({
+      url: '../../pages/content/follow/add/add',
+    })
+  },
 
 
 })  
