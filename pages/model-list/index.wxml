@@ -13,7 +13,7 @@
   <view class='class-list'>
     <view wx:if="{{dataArray.length>0}}">
       <view class='class-item' wx:for-index="idx"  wx:for="{{dataArray}}" wx:for-item="item" wx:key="uniques">
-        <view class='img-box' bindtap='goModelDetail' data-typeid="{{item.Template_Type_Id?item.Template_Type_Id:'1'}}">
+        <view class='img-box' bindtap='goModelDetail' data-typeid="{{item.Template_Type_Id?item.Template_Type_Id:'2'}}">
           <image src='{{item.Url?item.Url:"../../image/browse_failure/browse_failure.png"}}' class='class-img' binderror="errorFunction" data-id='{{idx}}'></image>
           <image wx:if="{{item.Vip}}" src='../../image/model/VIP.png' class='vip-img' mode='aspectFit'></image>
         </view>

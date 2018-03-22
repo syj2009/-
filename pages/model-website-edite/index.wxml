@@ -30,7 +30,7 @@
   <view class="{{alertShow?'bg-black':'hidden'}}">
     <view class='alert-view'>
       <view class='text-area-box'>
-        <textarea placeholder='请输入字数' class='text-area-style' maxlength='{{chartStatues.maxChartLength}}' bindinput='chartNumberChange'></textarea>
+        <textarea placeholder='请输入字数' class='text-area-style' maxlength='{{chartStatues.maxChartLength}}' bindinput='chartNumberChange' value='{{textareaValue}}'></textarea>
         <text class='text-area-number'>{{chartStatues.currentChartLength}}/{{chartStatues.maxChartLength}}</text>
       </view>
       <view class='btn-box'>
@@ -43,36 +43,36 @@
   
   <view class='website-bg-img' style="background-image: url('../../image/modelDetail/bg.png')">
     <view class='banner-top'>
-      <view class='border-blue-banner' bindtap='changeImage' data-id='2'>
-        <view class='edite-box' bindtap='changeImage' data-id='2'>
+      <view class='border-blue-banner' catchtap='changeImage' data-type='0' data-id='1'>
+        <view class='edite-box' catchtap='changeImage'data-type='0' data-id='1'>
           <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
         </view>
-        <image src='../../image/modelDetail/website-banner.png' class='banner-top'></image>
+        <image src='{{bannerImg}}' class='banner-top'></image>
       </view>
     </view>
     <view class='border-bg-img'>
       <view class='img-box-center'>
-        <view class='border-blue-position' bindtap='changeImage' data-id='2'>
-          <view class='edite-box' bindtap='changeImage' data-id='2'>
+        <view class='border-blue-position' catchtap='changeImage' data-type='0' data-id='2'>
+          <view class='edite-box' catchtap='changeImage' data-type='0' data-id='2'>
             <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
           </view>
-          <image src='../../image/modelDetail/website-banner.png' class='head-img'></image>
+          <image src='{{institutionImg}}' class='head-img'></image>
         </view>
       </view>
       <view class='organizationName'>
-        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue-title' catchtap='changeText' data-type='0' data-id='1'>
+          <view class='edite-box' catchtap='changeText' data-type='0' data-id='1'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text>会考吧学院</text>
+          <text>{{institutionName}}</text>
         </view>
       </view>
       <view class='organizationContent'>
-        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue-title' catchtap='changeText' data-type='0' data-id='2'>
+          <view class='edite-box' catchtap='changeText' data-type='0' data-id='2'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text>法定块话费卡独守空房dash分开灰色的客户发</text>
+          <text>{{institutionDesc}}</text>
         </view>
       </view>
       <image class='left-gou' src='../../image/modelDetail/003.png'></image>
@@ -81,29 +81,54 @@
 
     <view class='border-bg-img'>
       <view class='head-title' style="background-image: url('../../image/modelDetail/titleBox.png')">  
-        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue-title' catchtap='changeText' data-type='0' data-id='3'>
+          <view class='edite-box' catchtap='changeText' data-type='0' data-id='3'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text>机构优势</text>
+          <text>{{classTitle}}</text>
         </view>
       </view>
-      <view class='institution-advantage-list'>
-        <view class='institution-advantage-item'>
-          <view class='float-left'>
-            <view class='border-blue' bindtap='changeImage' data-id='2'>
-              <view class='edite-box' bindtap='changeImage' data-id='2'>
-                <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+      <view class='institution-advantage-list' wx:for-index="idx"  wx:for="{{institutionAdvList}}" wx:for-item="item" wx:key="uniques">
+        <view wx:if="{{idx==0}}">
+          <view class='institution-advantage-item'>
+            <view class='float-left'>
+              <view class='border-blue' catchtap='changeImage' data-type='1' data-id='{{idx}}'>
+                <view class='edite-box-first' catchtap='changeImage' data-type='1' data-id='{{idx}}'>
+                  <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+                </view>
+                <view class='add-edite-box' catchtap='addItem' data-id='1'>
+                  <image src='../../image/modelDetail/add-edite.png' class='edite-icon'></image>
+                </view>
+                <image src='{{item.AdvantageImgeUrl}}' class='institution-img'></image>
               </view>
-              <image src='../../image/modelDetail/banner001.png' class='institution-img'></image>
+            </view>
+            <view class='float-left institution-descr'>
+              <view class='text-border-blue' catchtap='changeText' data-type='1' data-id='{{idx}}'>
+                <view class='edite-box' catchtap='changeText' data-type='1' data-id='{{idx}}'>
+                  <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+                </view>
+                <text>{{item.AdvantageContent}}</text>
+              </view>
             </view>
           </view>
-          <view class='float-left institution-descr'>
-            <view class='text-border-blue' bindtap='changeText' data-id='1'>
-              <view class='edite-box' bindtap='changeText' data-id='1'>
-                <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+        </view>
+        <view wx:else>
+          <view class='institution-advantage-item'>
+            <view class='float-left'>
+              <view class='border-blue' catchtap='changeImage' data-type='1' data-id='{{idx}}'>
+                <view class='edite-box' catchtap='changeImage' data-type='1' data-id='{{idx}}'>
+                  <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+                </view>
+                <image src='{{item.AdvantageImgeUrl}}' class='institution-img'></image>
               </view>
-              <text> 法定块话费卡独守空房dash分开灰色的客户发</text>
+            </view>
+            <view class='float-left institution-descr'>
+              <view class='text-border-blue' catchtap='changeText' data-type='1' data-id='{{idx}}'>
+                <view class='edite-box' catchtap='changeText' data-type='1' data-id='{{idx}}'>
+                  <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+                </view>
+                <text>{{item.AdvantageContent}}</text>
+              </view>
             </view>
           </view>
         </view>
@@ -114,62 +139,70 @@
     
     <view class='border-bg-img'>
       <view class='head-title' style="background-image: url('../../image/modelDetail/titleBox.png')">  
-        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue-title' catchtap='changeText' data-type='0' data-id='4'>
+          <view class='edite-box' catchtap='changeText' data-type='0' data-id='4'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text>机构优势</text>
+          <text>{{projectTitle}}</text>
         </view>
       </view>
       <view class='project-list'>
-        <view class='project-item'>
-          <view>
-            <view class='border-blue' bindtap='changeImage' data-id='2'>
-              <view class='edite-box' bindtap='changeImage' data-id='2'>
-                <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+        <view wx:for-index="idx"  wx:for="{{projectList}}" wx:for-item="item" wx:key="unique">
+          <view wx:if="{{idx==0}}">
+            <view class='project-item'>
+              <view>
+                <view class='border-blue' catchtap='changeImage'  data-type='2' data-id='2'>
+                  <view class='edite-box-first' catchtap='changeImage' data-type='2' data-id='{{idx}}'>
+                    <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+                  </view>
+                  <view class='add-edite-box' catchtap='addItem' data-id='2'>
+                    <image src='../../image/modelDetail/add-edite.png' class='edite-icon'></image>
+                  </view>
+                  <image src='{{item.ProjectImgeUrl}}' class='project-img'></image>
+                </view>
               </view>
-              <image src='../../image/modelDetail/banner001.png' class='project-img'></image>
+              <view class='text-border-blue' catchtap='changeText' data-type='2' data-id='1'>
+                <view class='edite-box' catchtap='changeText' data-type='2' data-id='1'>
+                  <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+                </view>
+                <view class='project-title'>{{item.ProjectContent}}</view>
+              </view>         
             </view>
           </view>
-          <view class='text-border-blue' bindtap='changeText' data-id='1'>
-            <view class='edite-box' bindtap='changeText' data-id='1'>
-              <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
-            </view>
-            <view class='project-title'>学历教育</view>
-          </view>         
-        </view>
-
-        <view class='project-item'>
-          <view>
-            <view class='border-blue' bindtap='changeImage' data-id='2'>
-              <view class='edite-box' bindtap='changeImage' data-id='2'>
-                <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+          <view wx:else>
+            <view class='project-item'>
+              <view>
+                <view class='border-blue' catchtap='changeImage' data-type='2' data-id='2'>
+                  <view class='edite-box' catchtap='changeImage' data-type='2' data-id='2'>
+                    <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
+                  </view>
+                  <image src='{{item.ProjectImgeUrl}}' class='project-img'></image>
+                </view>
               </view>
-              <image src='../../image/modelDetail/banner001.png' class='project-img'></image>
+              <view class='text-border-blue' catchtap='changeText' data-type='2' data-id='1'>
+                <view class='edite-box' catchtap='changeText' data-type='2' data-id='1'>
+                  <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
+                </view>
+                <view class='project-title'>{{item.ProjectContent}}</view>
+              </view>         
             </view>
           </view>
-          <view class='text-border-blue' bindtap='changeText' data-id='1'>
-            <view class='edite-box' bindtap='changeText' data-id='1'>
-              <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
-            </view>
-            <view class='project-title'>学历教育</view>
-          </view>         
         </view>
       </view>
     </view>
 
     <view class='sign-up-view'>
       <view class='code-view'>
-        <view class='border-blue' bindtap='changeImage' data-id='2'>
-          <view class='edite-box' bindtap='changeImage' data-id='2'>
+        <view class='border-blue' catchtap='changeImage' data-type='0' data-id='2'>
+          <view class='edite-box' catchtap='changeImage' data-type='0' data-id='2'>
             <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
           </view>
-          <image src='../../image/modelDetail/banner001.png' class='code-img'></image>
+          <image src='{{codeImg}}' class='code-img'></image>
         </view>
       </view>
       <view class='code-descr'>
-        <view class='text-border-blue' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue' catchtap='changeText' data-type='0' data-id='1'>
+          <view class='edite-box' catchtap='changeText' data-type='0' data-id='1'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
           <view>长按识别二维码，即刻加入微信群。教授，专业大咖课程免费听！</view>

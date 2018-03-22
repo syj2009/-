@@ -426,6 +426,19 @@
   top: -5rpx;
 }
 
+.edite-box-first {
+  display: inline-block;
+  width: 68rpx;
+  height: 70rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 80rpx;
+  position: absolute;
+  right: 68rpx;
+  top: -70rpx;
+  border-radius: 10rpx;
+}
+
 .edite-box {
   display: inline-block;
   width: 68rpx;
@@ -435,6 +448,19 @@
   line-height: 80rpx;
   position: absolute;
   right: 0;
+  top: -70rpx;
+  border-radius: 10rpx;
+}
+
+.add-edite-box {
+  display: inline-block;
+  width: 68rpx;
+  height: 70rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 80rpx;
+  position: absolute;
+  right: 0rpx;
   top: -70rpx;
   border-radius: 10rpx;
 }

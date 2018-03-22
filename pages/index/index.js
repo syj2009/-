@@ -31,6 +31,8 @@ P('index', {
     });
     //获取列表数据
     this.getModelList();
+    var userInfo = wx.getStorageSync("userInfo");
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>获取个人信息"+JSON.stringify(userInfo));
   },
 
   getModelList: function () {
@@ -46,6 +48,7 @@ P('index', {
       method: 'POST',
       dataType: 'json',
       success: function (res) {
+        console.log(JSON.stringify(res))
         if(res.data.Msg){
           if (res.data.Info.BannerList.length>0){
             that.setData({

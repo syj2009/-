@@ -29,7 +29,7 @@
   <view class="{{alertShow?'bg-black':'hidden'}}">
     <view class='alert-view'>
       <view class='text-area-box'>
-        <textarea placeholder='请输入字数' class='text-area-style' maxlength='{{chartStatues.maxChartLength}}' bindinput='chartNumberChange'></textarea>
+        <textarea placeholder='请输入字数' class='text-area-style' maxlength='{{chartStatues.maxChartLength}}' bindinput='chartNumberChange' value='{{textareaValue}}'></textarea>
         <text class='text-area-number'>{{chartStatues.currentChartLength}}/{{chartStatues.maxChartLength}}</text>
       </view>
       <view class='btn-box'>
@@ -40,16 +40,16 @@
   </view>
   <view class='website-bg-img' style="background-image: url('../../image/modelDetail/banner.png')">
     <view class='head-view'>
-      <view class='border-blue' bindtap='changeImage' data-id='1'>
-        <view class='edite-box' bindtap='changeImage' data-id='1'>
+      <view class='border-blue' bindtap='changeImage' data-id='1' data-type='0'>
+        <view class='edite-box' bindtap='changeImage' data-id='1' data-type='0'>
           <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
         </view>
         <image src='{{headImg}}' class='head-img'></image>
       </view>
     </view>
     <view class='class-describe-view'>
-      <view class='border-blue-position' bindtap='changeImage' data-id='2'>
-        <view class='edite-box' bindtap='changeImage' data-id='2'>
+      <view class='border-blue-position' bindtap='changeImage' data-id='2' data-type='0'>
+        <view class='edite-box' bindtap='changeImage' data-id='2' data-type='0'>
           <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
         </view>
         <image src='{{courseImg}}' class='class-describe-img'></image>
@@ -57,24 +57,24 @@
     </view>
     <view class='fit-describe-view'>
       <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
-        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue-title' bindtap='changeText' data-id='1' data-type='0'>
+          <view class='edite-box' bindtap='changeText' data-id='1' data-type='0'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text class='input-box'>班级介绍</text>
+          <text class='input-box'>{{classContentTitle}}</text>
         </view> 
       </view>
       <view class='content-describe'>
-        <view class='text-border-blue' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue' bindtap='changeText' data-id='2' data-type='0'>
+          <view class='edite-box' bindtap='changeText' data-id='2' data-type='0'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text> 法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间</text>
+          <text>{{classContent}}</text>
         </view>
       </view>
       <view>
-        <view class='border-blue-position' bindtap='changeImage' data-id='2'>
-          <view class='edite-box' bindtap='changeImage' data-id='2'>
+        <view class='border-blue-position' bindtap='changeImage' data-id='3' data-type='0'>
+          <view class='edite-box' bindtap='changeImage' data-id='3' data-type='0'>
             <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
           </view>
           <image src='{{classImg}}' class='fit-describe-img'></image>
@@ -83,24 +83,24 @@
     </view>
     <view class='fit-describe-view'>
       <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
-        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue-title' bindtap='changeText' data-id='3' data-type='0'>
+          <view class='edite-box' bindtap='changeText' data-id='3' data-type='0'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text class='input-box'>适合人群</text>
+          <text class='input-box'>{{fitPeopleTitle}}</text>
         </view>  
       </view>
       <view class='content-describe'>
-        <view class='text-border-blue' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue' bindtap='changeText' data-id='4' data-type='0'>
+          <view class='edite-box' bindtap='changeText' data-id='4' data-type='0'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text> 法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间</text>
+          <text> {{fitPeopleContent}}</text>
         </view>
       </view>
       <view>
-        <view class='border-blue-position' bindtap='changeImage' data-id='2'>
-          <view class='edite-box' bindtap='changeImage' data-id='2'>
+        <view class='border-blue-position' bindtap='changeImage' data-id='4' data-type='0'>
+          <view class='edite-box' bindtap='changeImage' data-id='4' data-type='0'>
             <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
           </view>
           <image src='{{peopleImg}}' class='fit-describe-img'></image>
@@ -109,29 +109,29 @@
     </view>
     <view class='fit-describe-view'>
       <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
-        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue-title' bindtap='changeText' data-id='5' data-type='0'>
+          <view class='edite-box' bindtap='changeText' data-id='5' data-type='0'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text class='input-box'>上课时间</text>
+          <text class='input-box'>{{classTimeTitle}}</text>
         </view>   
       </view>
       <view class='content-describe'>
-        <view class='text-border-blue' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue' bindtap='changeText' data-id='6' data-type='0'>
+          <view class='edite-box' bindtap='changeText' data-id='6' data-type='0'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text> 法定块话费卡独守空房dash分开灰色的客户发科技时代科技发挥空间阿斯蒂芬空间哈苏德空间发挥科技大厦封口机哈的空间</text>
+          <text>{{classTimeContent}}</text>
         </view>
       </view>
     </view>
     <view class='fit-describe-view'>
       <view class='head-title' style="background-image: url('../../image/modelDetail/biao.png')">  
-        <view class='text-border-blue-title' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue-title' bindtap='changeText' data-id='10' data-type='0'>
+          <view class='edite-box' bindtap='changeText' data-id='10' data-type='0'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text class='input-box'>班级课程</text>
+          <text class='input-box'>{{classTitle}}</text>
         </view>   
       </view>
       <view class='course-list'  wx:for="{{classList}}" wx:for-index="idx" wx:for-item="itemName">
@@ -141,7 +141,7 @@
               <view class='edite-box' bindtap='changeImage' data-id='2'>
                 <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
               </view>
-              <image src='{{itemName.classItemImg}}' class='fit-describe-img'></image>
+              <image src='{{itemName.CourseImageUrl}}' class='fit-describe-img'></image>
             </view>
             <view class='fit-describe-span' bindtap='changeText' data-id='1'>
               <view class='edite-box' bindtap='changeText' data-id='1'>
@@ -161,36 +161,36 @@
     </view>
     <view class='school-info'>
       <view>
-        <view class='border-blue' bindtap='changeImage' data-id='1'>
-          <view class='edite-box' bindtap='changeImage' data-id='1'>
+        <view class='border-blue' bindtap='changeImage' data-id='5' data-type='0'>
+          <view class='edite-box' bindtap='changeImage' data-id='5' data-type='0'>
             <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
           </view>
-          <image src='{{headImg}}' class='school-logo'></image>
+          <image src='{{schoolImg}}' class='school-logo'></image>
         </view>
       </view>
       <view class='school-title'>
-        <view class='text-border-blue' bindtap='changeText' data-id='1'>
-          <view class='edite-box' bindtap='changeText' data-id='1'>
+        <view class='text-border-blue' bindtap='changeText' data-id='8' data-type='0'>
+          <view class='edite-box' bindtap='changeText' data-id='8' data-type='0'>
             <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
           </view>
-          <text> 会考吧学院</text>
+          <text>{{schoolName}}</text>
         </view>
       </view>
       <view>
-        <view class='border-blue' bindtap='changeImage' data-id='1'>
-          <view class='edite-box' bindtap='changeImage' data-id='1'>
+        <view class='border-blue' bindtap='changeImage' data-id='6' data-type='0'>
+          <view class='edite-box' bindtap='changeImage' data-id='6' data-type='0'>
             <image src='../../image/modelDetail/img-edite.png' class='edite-icon'></image>
           </view>
-          <image src='{{headImg}}' class='school-code' mode="scaleToFill"></image>
+          <image src='{{codeImg}}' class='school-code' mode="scaleToFill"></image>
         </view>
       </view>
       <view class='code-describe'>
         <view>
-          <view class='text-border-blue' bindtap='changeText' data-id='1'>
-            <view class='edite-box' bindtap='changeText' data-id='1'>
+          <view class='text-border-blue' bindtap='changeText' data-id='9' data-type='0'>
+            <view class='edite-box' bindtap='changeText' data-id='9' data-type='0'>
               <image src='../../image/modelDetail/pen-edite.png' class='edite-icon'></image>
             </view>
-            <text> 会考吧学院</text>
+            <text>{{codeDesc}}</text>
           </view>
         </view>
       </view>
