@@ -2,6 +2,8 @@
 var P = require('../../lib/wxpage')
 P('index', {
   data: {
+    //列表行数
+    currentColum:'',
     currentInputValue: '',//表示当前所在的input框的位置
     //判断点击的输入类型
     textareaType: '0',
@@ -18,7 +20,7 @@ P('index', {
     courseImg:"../../image/modelDetail/banner001.png",
     classImg:"../../image/modelDetail/banner002.png",
     peopleImg:"../../image/modelDetail/banner002.png",
-    codeImg:"../../image/modelDetail/banner002.png",
+    codeImg:"../../image/modelDetail/erweima.png",
     schoolImg:"../../image/modelDetail/banner002.png",
     //描述的相关数据
     classContentTitle:"班级介绍",
@@ -35,11 +37,21 @@ P('index', {
     classTitle:"班级介绍",
     classList:[{
       CourseImageUrl:"../../image/modelDetail/banner002.png",
-      CourseCounten:"",
-      CourseName:"",
+      CourseCounten:"班级介绍",
+      CourseName:"班级介绍",
     }],
     //封面是否显示
     coverShow: false,
+    //二维码状态
+    codeType: "1",
+    //二维码日期
+    date: '2018-09-11',
+    //二维码是否显示
+    codeShow:false,
+    //二维码选择图片地址
+    codeChooseImg:"../../image/modelDetail/icon_xuanzhong.png",
+    codeNoChooseImg:"../../image/modelDetail/icon_weixuan.png",
+    uploadCodeImg:"../../image/modelDetail/erweima.png"
   },
 
   onLaunch: function () {
@@ -97,9 +109,14 @@ P('index', {
         alertShow: false,
         textareaValue: ''
       })
-    } else {
+    } else if (e.currentTarget.dataset.id == '2') {
       this.setData({
         coverShow: false,
+        textareaValue: ''
+      })
+    }else{
+      this.setData({
+        codeShow: false,
         textareaValue: ''
       })
     }
@@ -109,7 +126,7 @@ P('index', {
    * 确定按钮
    */
   submitClick:function(e){
-    if (e.currentTarget.dataset.id == 1) {
+    if (e.currentTarget.dataset.id == '1') {
       var dataType = this.data.textareaType;
       var positionIndex = this.data.currentInputValue;
       var value = this.data.textareaValue;
@@ -224,10 +241,14 @@ P('index', {
         };
       } else if (dataType == '1') {
         //机构列表内容赋值
-        var dataList = that.data.institutionAdvList;
-        dataList[positionIndex].AdvantageContent = value;
+        var dataList = that.data.classList;
+        if (that.data.currentColum == '1'){
+          dataList[positionIndex].CourseCounten = value;
+        }else{
+          dataList[positionIndex].CourseName = value;
+        }
         that.setData({
-          institutionAdvList: dataList,
+          classList: dataList,
           alertShow: false,
           chartStatues: {
             maxChartLength: maxNum,
@@ -235,9 +256,53 @@ P('index', {
           },
         });
       } 
-    } else {
+    } else if (e.currentTarget.dataset.id == '2'){
+      //提交模版信息
       this.setData({
         coverShow: false,
+      });
+
+      //图片相关数据
+      wx.request({
+        url: getApp().data.host + "/api/Template/SaveTinyClass",
+        data: {
+          "Type": "1", //1：新增 2：编辑 
+          "UserId": "1",//老师id
+          "TemplateId":"",//新增模版id
+          "ProgrammeName": "19", //方案id 编辑使用
+          "ProgrammeImg": that.data.headImg,
+          "ClassName": that.data.classContentTitle,
+          "ClassNameImgeUrl": that.data.courseImg,
+          "ClassContentTitle": that.data.classContentTitle,
+          "ClassContent": that.data.classContent,
+          "ClassContentImg": that.data.courseImg,
+          "Fit": that.data.fitPeopleTitle,
+          "FitContent": that.data.fitPeopleContent,
+          "FitImgeUrl": that.data.peopleImg,
+          "ClassBeginsTitle": that.data.classTimeTitle,
+          "ClassBegin": that.data.classTimeContentBegin,
+          "ClassEnd": that.data.classTimeContentEnd,
+          "TrainingName": that.data.schoolName,
+          "TrainingLogo": that.data.schoolImg,
+          "QrCode": that.data.codeImg,
+          "QrCodeContent": that.data.codeDesc,
+          "Registrationfee":"",
+          "ClassCourseList": that.data.classList,
+        },
+        method: 'POST',
+        dataType: 'json',
+        success: function (res) {
+          if (res.data.Msg) {
+
+          }
+        },
+      });
+    }else{
+      var imgUrl = this.data.uploadCodeImg;
+      this.setData({
+        codeShow: false,
+        textareaValue: '',
+        codeImg: imgUrl
       })
     }
   },
@@ -252,6 +317,7 @@ P('index', {
       alertShow: true,
       currentInputValue: e.currentTarget.dataset.id,
       textareaType: e.currentTarget.dataset.type,
+      currentColum: e.currentTarget.dataset.colum,
     });
   },
 
@@ -325,10 +391,10 @@ P('index', {
                 }
               } else if (dataType == '1') {
                 //机构列表图片转换
-                var dataList = that.data.institutionAdvList;
-                dataList[positionIndex].AdvantageImgeUrl = data.Info.Url;
+                var dataList = that.data.classList;
+                dataList[positionIndex].CourseImageUrl = data.Info.Url;
                 that.setData({
-                  institutionAdvList: dataList
+                  classList: dataList
                 });
               } 
             } else {
@@ -341,6 +407,71 @@ P('index', {
 
 
       }
+    })
+  },
+
+  //增加班级内容
+  addItem: function (e) {
+    var that = this;
+    var arrList = that.data.classList;
+    arrList.push({
+      CourseImageUrl: "../../image/modelDetail/banner002.png",
+      CourseCounten: "班级介绍",
+      CourseName: "班级介绍",
+    });
+    that.setData({
+      classList: arrList
+    })
+  },
+
+  //调起日期控件
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+
+  //点击选择二维码
+  clickCode:function(e){
+    if (e.currentTarget.dataset.id == '1') {
+      this.setData({
+        codeType: "1"
+      })
+    }else{
+      this.setData({
+        codeType: "2"
+      })
+    }
+  },
+  //上传二维码图片
+  uploadCodeImg:function(){
+    var  that = this;
+    wx.chooseImage({
+      count: 1, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        wx.uploadFile({
+          url: getApp().data.host + "/api/Account/UploadImage",
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success: function (res) {
+            var data = JSON.parse(res.data);
+            that.setData({
+              uploadCodeImg: data.Info.Url
+            });
+          }
+        })
+      }
+    })
+  },
+  //显示二维码弹框
+  showCodeView:function(){
+    this.setData({
+      codeShow:true
     })
   }
 })

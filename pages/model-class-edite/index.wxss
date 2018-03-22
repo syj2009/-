@@ -191,6 +191,19 @@
   top: -20rpx;
 }
 
+.edite-box-first {
+  display: inline-block;
+  width: 68rpx;
+  height: 70rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 80rpx;
+  position: absolute;
+  right: 68rpx;
+  top: -70rpx;
+  border-radius: 10rpx;
+}
+
 .edite-box {
   display: inline-block;
   width: 68rpx;
@@ -200,6 +213,19 @@
   line-height: 80rpx;
   position: absolute;
   right: 0;
+  top: -70rpx;
+  border-radius: 10rpx;
+}
+
+.add-edite-box {
+  display: inline-block;
+  width: 68rpx;
+  height: 70rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 80rpx;
+  position: absolute;
+  right: 0rpx;
   top: -70rpx;
   border-radius: 10rpx;
 }
@@ -381,4 +407,73 @@
 .save-btn {
   height: 88rpx;
   font-size: 30rpx;
+}
+
+
+
+/*二维码弹框  */
+
+.choose-img {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 15rpx;
+}
+
+.code-view {
+  background-color: #fff;
+  width: 80%;
+  margin: 200rpx auto;
+}
+
+.btn-top-view {
+  height: 96rpx;
+  line-height: 96rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eaeaea;
+  padding: 0rpx 30rpx 0 30rpx;
+}
+
+.code-middle-view {
+  height: 140rpx;
+  line-height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eaeaea;
+  padding: 0rpx 30rpx 0 30rpx;
+}
+
+.code-img {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+
+.outtime-view {
+  height: 96rpx;
+  line-height: 96rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eaeaea;
+  padding: 0rpx 30rpx 0 30rpx;
+
+}
+
+.alert-span {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.date-green {
+  font-size: 34rpx;
+  color: #3cb149; 
+}
+
+.btn-bottom-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
