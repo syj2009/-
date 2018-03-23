@@ -25,21 +25,16 @@ require('./lib/wxpage').A({
     var that = this;
     wx.getSetting({
       success:function(res){
-        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Setting"+JSON.stringify(res))
         if(!res.authSetting['scope.userInfo']){
           wx.authorize({
             scope: 'scope.userInfo',
             success(data){
-              console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Setting2" + JSON.stringify(res))
-
               that.setData({
                 isFirstGo:false
               })
             },
             fail(){
-              console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Setting1" + JSON.stringify(res))
-              wx.openSetting({
-              })
+             
             },
           })
         }

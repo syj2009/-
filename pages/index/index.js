@@ -29,6 +29,17 @@ P('index', {
     wx.showShareMenu({
       withShareTicket: true
     });
+
+    //授权验证
+    wx.getSetting({
+      success: function (res) {
+        if (!res.authSetting['scope.userInfo']) {
+          wx.openSetting({
+          });
+        }
+      }
+    });
+
     //获取列表数据
     this.getModelList();
     var userInfo = wx.getStorageSync("userInfo");

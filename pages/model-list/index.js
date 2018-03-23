@@ -62,6 +62,7 @@ P('index', {
       method: 'POST',
       dataType: 'json',
       success: function (res) {
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>模版列表" + JSON.stringify(res))
         if(res.data.Msg){
           that.setData({
             dataArray: res.data.Info.TemplateList
