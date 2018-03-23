@@ -38,6 +38,7 @@ P('index', {
   getModelList: function () {
     var that = this;
     var openId = wx.getStorageSync("Openid");
+    console.log("openId:" + openId)
     wx.request({
       url: getApp().data.host + "/api/Template/GetMyProgrammeList",
       data: {
